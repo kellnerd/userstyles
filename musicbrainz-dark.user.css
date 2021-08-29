@@ -24,22 +24,25 @@
 	}
 	
 	/* header menu & tabs */
+	.header .right ul.menu > li .menu-header, #footer-menu {
+		filter: contrast(2);
+	}
 	.header .right ul.menu li ul li {
 		background-color: #444;
 	}
 	.header .right ul.menu li ul li a, div.tabs, div.tabs ul li a {
 		color: inherit;
-		border-color: #777;
+		border-color: #555;
 	}
 	div.tabs ul li.disabled a {
 		color: #DDD;
-		background-color: #777;
-		border-color: #777;
+		background-color: #555;
+		border-color: #555;
 	}
 	
 	/* table headers and stripes */
 	table.tbl {
-		border-color: #777;
+		border-color: #666;
 		border-top-width: 2px; /* inversion of thead hides 1px border!? */
 	}
 	table.tbl thead, table.tbl .subh {
@@ -61,7 +64,7 @@
 	}
 	
 	/* entity pages */
-	#sidebar {
+	#sidebar, li.separator {
 		border-color: #555;
 	}
 	#sidebar ul.external_links li {
@@ -214,7 +217,7 @@
 	.buttons a:visited {
 		color: #666; /* do net let visited buttons look different */
 	}
-	button.icon, button.tag-vote, a.positive, a.negative { /* exceptions */
+	button.icon, button.tag-vote { /* exceptions */
 		filter: none;
 	}
 	thead input, tr.subh input {
@@ -258,20 +261,13 @@
 	.edit-notes .edit-note .date {
 		color: #BBB;
 	}
-	
-	/* voting interface: darken colored edit headers and voting options */
-	.edit-header, .edit-actions {
+	.edit-list .edit-actions {
 		color: initial;
-		filter: brightness(80%);
+		background-color: #777;
 	}
-	.edit-header .subheader a {
-		color: revert;
-	}
-	.edit-actions .vote input {
-		filter: none;
-	}
-	.edit-actions {
-		/* alternative (clashes with POWER VOTE highlights): background-color: #444; */
+	.edit-header {
+		color: initial;
+		filter: brightness(80%); /* darken colored edit headers */
 	}
 	
 	/* user avatars */
@@ -280,8 +276,8 @@
 		border-color: #888;
 	}
 	img.gravatar[src*=placeholder] {
-		/* background: #CCC; /* invert(#444) = #BBB */
-		/* filter: invert(0.9); */
+		border-color: #BBB;
+		filter: brightness(0.7);
 	}
 	
 	/* hyperlinks */
@@ -299,6 +295,9 @@
 	}
 	
 	/* highlights */
+	.annotation-details, .lastupdate, .small {
+		color: #999;
+	}
 	.negative {
 		background: #500;
 	}
