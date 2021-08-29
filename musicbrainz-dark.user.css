@@ -73,8 +73,7 @@
 	.annotation-collapsed::after, .collapsed::after, .review-collapsed::after, .wikipedia-extract-collapsed::after {
 		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, #111 100%) !important;
 	}
-	span.caa-icon:not([style]) {
-		/* do not invert real covers with inline style attribute which were injected by jesus2099 FUNKEY ILLUSTRATED RECORDS */
+	span.caa-icon {
 		filter: invert(0.9);
 	}
 
@@ -154,7 +153,7 @@
 		filter: invert(1);
 	}
 	/* icons */
-	button.icon.guesscase-title, button.icon.guessfeat, button.icon.guess-punctuation, img[src*=guesscase],
+	button.icon.guesscase-title, button.icon.guessfeat, img[src*=guesscase],
 	button.icon[class*=down], button.icon[class*=up],
 	button.icon.copy-date, button.icon.add-item,
 	button.icon.collapse-medium, button.icon.expand-medium,
@@ -188,7 +187,6 @@
 	}
 	table.statistics th {
 		background: #333;
-		color: #EB743B; /* do not interfere with jesus2099 USER_STATS highlight colors */
 	}
 
 	/* tags and genres */
@@ -325,47 +323,5 @@
 	.mw-parser-output > table:nth-child(1) {
 		color: initial;
 		filter: brightness(70%);
-	}
-
-	/*** userscript fixes ***/
-
-	/* jesus2099 ELEPHANT EDITOR */
-	label[title^="saves edit note"] {
-		color: initial;
-	}
-	input[value=×] {
-		filter: none;
-	}
-
-	/* jesus2099 SUPER MIND CONTROL */
-	.header {
-		background: #111 !important; /* jesus2099 STATIC_MENU */
-	}
-	#jesus2099userjs85790j2sets {
-		color: black;
-	}
-	#jesus2099userjs85790j2sets a:link {
-		color: revert;
-	}
-	/* TODO: jesus2099 TAG TOOLS still unreadable: ↙mine and others’ */
-
-	/* jesus2099 MASS MERGE RECORDINGS */
-	div#MMR2099userjs120382, form.MMR2099userjs120382 {
-		color: initial;
-	}
-
-	/* jesus2099 INLINE STUFF */
-	a[jesus2099userjs81127recname] {
-		color: red;
-	}
-
-	/* loujine */
-	#loujine-sidebar, #loujine-menu {
-		background: inherit !important;
-	}
-
-	/* murdos relationship shortcuts */
-	td.relationships a img {
-		filter: drop-shadow(0 0 2px #999); /* black icons become invisible otherwise */
 	}
 }

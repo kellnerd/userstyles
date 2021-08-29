@@ -1,0 +1,56 @@
+@-moz-document domain("musicbrainz.org") {
+	/* additional style fixes for some popular userscripts, use together with musicbrainz-dark.user.css */
+
+	/* jesus2099 ELEPHANT EDITOR */
+	label[title^="saves edit note"] {
+		color: initial;
+	}
+	input[value=×] {
+		filter: none;
+	}
+
+	/* jesus2099 FUNKEY ILLUSTRATED RECORDS: do not invert real covers */
+	span.caa-icon[style] {
+		filter: none;
+	}
+
+	/* jesus2099 INLINE STUFF */
+	a[jesus2099userjs81127recname] {
+		color: red;
+	}
+
+	/* jesus2099 MASS MERGE RECORDINGS */
+	div#MMR2099userjs120382, form.MMR2099userjs120382 {
+		color: initial;
+	}
+
+	/* jesus2099 SUPER MIND CONTROL */
+	#jesus2099userjs85790j2sets {
+		color: black;
+	}
+	#jesus2099userjs85790j2sets a:link {
+		color: revert;
+	}
+	.header {
+		background: #111 !important; /* jesus2099 STATIC_MENU, TODO: box-shadow */
+	}
+	table.statistics th {
+		color: #EB743B; /* USER_STATS: do not interfere with highlight colors */
+	}
+	/* TODO: TAG TOOLS: "↙mine and others’" unreadable */
+
+	/* kellnerd guess punctuation */
+	button.icon.guess-punctuation {
+		filter: invert(0.9) hue-rotate(180deg);
+	}
+
+	/* loujine */
+	#loujine-sidebar, #loujine-menu {
+		background: inherit !important;
+	}
+
+	/* murdos relationship shortcuts */
+	td.relationships a img {
+		filter: drop-shadow(0 0 2px #999); /* black icons become invisible otherwise */
+	}
+}
