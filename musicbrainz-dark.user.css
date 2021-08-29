@@ -63,14 +63,24 @@
 	/* entity pages */
 	#sidebar {
 		border-color: #555;
-		background: -webkit-linear-gradient(top, #111 0%, #444 50%, #111 100%);
-		/* black icons invisible otherwise */
+	}
+	#sidebar ul.external_links li {
+		filter: drop-shadow(0 0 5px #999); /* black icons become invisible otherwise */
 	}
 	.annotation-collapsed::after, .collapsed::after, .review-collapsed::after, .wikipedia-extract-collapsed::after {
 		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, #111 100%) !important;
 	}
-	h1 .mp a { /* pending edits highlight makes light text unreadable */
-		color: initial !important;
+	span.caa-icon:not([style]) {
+		/* do not invert real covers with inline style attribute which were injected by jesus2099 FUNKEY ILLUSTRATED RECORDS */
+		filter: invert(0.9);
+	}
+
+	/* pending edits highlight */
+	td > span.mp, h1 span.mp a, .artwork-cont.mp {
+		color: initial !important; /* highlight makes light text unreadable */
+	}
+	span.mp .tooltip-content {
+		color: #DDD; /* revert above changes for the tooltips */
 	}
 	
 	/* release page */
@@ -252,7 +262,7 @@
 	/* voting interface: darken colored edit headers and voting options */
 	.edit-header, .edit-actions {
 		color: initial;
-		filter: brightness(70%);
+		filter: brightness(80%);
 	}
 	.edit-header .subheader a {
 		color: revert;
@@ -338,7 +348,13 @@
 	#jesus2099userjs85790j2sets a:link {
 		color: revert;
 	}
+	a[jesus2099userjs81127recname] { /* jesus2099 INLINE STUFF */
+		color: red;
+	}
 	#loujine-sidebar, #loujine-menu {
 		background: inherit !important;
+	}
+	td.relationships a img { /* murdos relationship shortcuts */
+		filter: drop-shadow(0 0 2px #999); /* black icons become invisible otherwise */
 	}
 }
