@@ -5,9 +5,6 @@
 	label[title^="saves edit note"] {
 		color: initial;
 	}
-	input[value=×] {
-		filter: none;
-	}
 
 	/* jesus2099 FUNKEY ILLUSTRATED RECORDS: do not invert real covers */
 	span.caa-icon[style] {
@@ -25,11 +22,8 @@
 	}
 
 	/* jesus2099 SUPER MIND CONTROL */
-	#jesus2099userjs85790j2sets {
-		color: black;
-	}
-	#jesus2099userjs85790j2sets a:link {
-		color: revert;
+	#jesus2099userjs85790j2sets, #jesus2099userjs85790j2sets th {
+		background: #333 !important; /* settings */
 	}
 	.header {
 		background: #111 !important; /* jesus2099 STATIC_MENU, TODO: box-shadow */
