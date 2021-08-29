@@ -1,0 +1,344 @@
+@-moz-document domain("musicbrainz.org") {
+	body {
+		background: #111;
+		color: #DDD;
+	}
+	
+	/* banner messages, artwork container (homepage), artist discography filter etc. */
+	.banner,
+	div.artwork-cont,
+	div.thumb-position,
+	.search-help, .form-help,
+	div.ar-descr,
+	.add-edit-note .edit-note-help,
+	.wikicontent #toc, .wikicontent .toc,
+	#drop-zone,
+	#filter {
+		background: #222;
+		border-color: #666;
+	}
+	div.caa-warning, div.warning {
+		border-color: #666;
+		background: #884;
+		color: initial;
+	}
+	
+	/* header menu & tabs */
+	.header .right ul.menu li ul li {
+		background-color: #444;
+	}
+	.header .right ul.menu li ul li a, div.tabs, div.tabs ul li a {
+		color: inherit;
+		border-color: #777;
+	}
+	div.tabs ul li.disabled a {
+		color: #DDD;
+		background-color: #777;
+		border-color: #777;
+	}
+	
+	/* table headers and stripes */
+	table.tbl {
+		border-color: #777;
+		border-top-width: 2px; /* inversion of thead hides 1px border!? */
+	}
+	table.tbl thead, table.tbl .subh {
+		filter: invert(0.9);
+	}
+	table.tbl th {
+		color: #111; /* invert(#DDD) = #222 */
+		border-left: 1px solid; /* TODO: no effect, left border not visible */
+		border-bottom-width: 2px; /* inversion of thead hides 1px border!? */
+	}
+	table.tbl .subh a { /* medium sections in disc id table */
+		filter: invert(1);
+	}
+	table.tbl .subh td {
+		color: #111; /* invert(#DDD) = #222 */
+	}
+	table.tbl tr.even td, table.tbl tr.even th {
+		background: #222;
+	}
+	
+	/* entity pages */
+	#sidebar {
+		border-color: #555;
+		background: -webkit-linear-gradient(top, #111 0%, #444 50%, #111 100%);
+		/* black icons invisible otherwise */
+	}
+	.annotation-collapsed::after, .collapsed::after, .review-collapsed::after, .wikipedia-extract-collapsed::after {
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, #111 100%) !important;
+	}
+	h1 .mp a { /* pending edits highlight makes light text unreadable */
+		color: initial !important;
+	}
+	
+	/* release page */
+	table.tbl.medium tr:not(.mp) .expand-triangle {
+		filter: invert(1);
+	}
+	dl.ars dt {
+		color: #BBB;
+	}
+	thead tr.mp {
+		filter: invert(1);
+	}
+	
+	/* release editor */
+	/* tabs */
+	.ui-tabs .ui-tabs-nav {
+		background: #333;
+	}
+	.ui-tabs .ui-tabs-nav li {
+		background: #111;
+	}
+	.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+		border-color: #666;
+	}
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+		border-color: #444;
+	}
+	.ui-tabs-nav .ui-state-default {
+		border-color: #333 !important;
+	}
+	.ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited,
+	.ui-state-active a, .ui-state-active a:hover, .ui-state-active a:link, .ui-state-active a:visited {
+		color:#DDD;
+	}
+	#release-editor .error-tab {
+		background-color: #633;
+	}
+	/* bubbles, tooltips & dialogs */
+	.bubble {
+		background: #333;
+	}
+	.bubble.left-tail::before, .bubble.right-tail::after {
+		border-right-color: #333;
+		border-left-color: #333;
+	}
+	.tooltip-container .tooltip-content {
+		background: #111;
+		border-color: #333;
+		box-shadow: 0 2px 5px #333;
+	}
+	.tooltip-container .tooltip-triangle:before {
+		border-right-color: #333;
+	}
+	.tooltip-container .tooltip-triangle:after {
+		border-right-color: #111;
+	}
+	.dialog {
+		background: #111;
+		border-color: #555;
+	}
+	.dialog.popover div[data-popper-arrow]::before {
+		background: #111;
+	}
+	.dialog.popover[data-popper-placement^="right"] > div[data-popper-arrow]::before {
+		border-color: #555;
+	}
+	/* tracklist tab */
+	#release-editor .medium.tbl tr.track td {
+		background: inherit;
+		border-color: #444;
+	}
+	#release-editor #recordings fieldset table tr.even td {
+		background: #222;
+	}
+	table.tbl .data-track.icon {
+		filter: invert(1);
+	}
+	/* icons */
+	button.icon.guesscase-title, button.icon.guessfeat, button.icon.guess-punctuation, img[src*=guesscase],
+	button.icon[class*=down], button.icon[class*=up],
+	button.icon.copy-date, button.icon.add-item,
+	button.icon.collapse-medium, button.icon.expand-medium,
+	.help {
+		filter: invert(0.9) hue-rotate(180deg);
+	}
+	span.autocomplete img.search {
+		filter: invert(0.9);
+	}
+	/* popup dialog widget (autocomplete, cover art gallery) */
+	.ui-menu .ui-menu-item a {
+		color: inherit;
+	}
+	.ui-menu .ui-menu-item a:hover,
+	.ui-widget-content:not(.ui-tabs) .ui-state-focus {
+		/* TODO causes problems with add medium tabs */
+		color: #111; /* invert(#222) = #DDD */
+		filter: invert(0.9);
+	}
+	.ui-widget-content {
+		background: inherit;
+		border-color: #555;
+	}
+	.content-loading {
+		filter: invert(1); /* no white placeholders for images, also inverts animation */
+	}
+	
+	/* editor statistics */
+	table.statistics th, table.statistics td {
+		border-color: #777;
+	}
+	table.statistics th {
+		background: #333;
+		color: #EB743B; /* do not interfere with jesus2099 USER_STATS highlight colors */
+	}
+	
+	/* tags and genres */
+	#all-tags .genre-list li.even, #all-tags .tag-list li.even, .all-tags .genre-list li.even, .all-tags .tag-list li.even {
+		background: #222;
+	}
+	.tag-count {
+		background: #444;
+	}
+	.tag-upvoted .tag-count, .tag-downvoted .tag-count {
+		color: initial;
+	}
+	
+	/* form elements */
+	input, select, textarea, button, .buttons a {
+		filter: invert(0.9) hue-rotate(180deg); /* make it dark but keep the color tone */
+	}
+	.buttons a:visited {
+		color: #666; /* do net let visited buttons look different */
+	}
+	button.icon, button.tag-vote, a.positive, a.negative { /* exceptions */
+		filter: none;
+	}
+	thead input, tr.subh input {
+		filter: hue-rotate(180deg); /* already inverted through thead / tr.subh */
+	}
+	
+	/* relationship editor */
+	#content.rel-editor .btn {
+		color: #BA478F; /* = link color */
+	}
+	#content.rel-editor span.link-phrase {
+		color: inherit;
+	}
+	#content.rel-editor span.link-phrase:hover,
+	#content.rel-editor span.link-phrase.rel-edit,
+	#content.rel-editor span.link-phrase.rel-add,
+	#content.rel-editor span.link-phrase.rel-remove,
+	.rel-edit, .rel-add, .rel-remove {
+		color: initial;
+	}
+	
+	/* pagination */
+	nav .pagination a {
+		background: inherit;
+		color: inherit;
+	}
+	nav .pagination span { /* disabled previous/next button */
+		background: #333;
+		color: #777;
+		border-color: #888;
+	}
+	
+	/* voting interface */
+	.edit-list {
+		background: #333;
+	}
+	.edit-notes .edit-note h3 {
+		background: #444;
+		color: #DDD;
+	}
+	.edit-notes .edit-note .date {
+		color: #BBB;
+	}
+	
+	/* voting interface: darken colored edit headers and voting options */
+	.edit-header, .edit-actions {
+		color: initial;
+		filter: brightness(70%);
+	}
+	.edit-header .subheader a {
+		color: revert;
+	}
+	.edit-actions .vote input {
+		filter: none;
+	}
+	.edit-actions {
+		/* alternative (clashes with POWER VOTE highlights): background-color: #444; */
+	}
+	
+	/* user avatars */
+	img.gravatar {
+		background: inherit;
+		border-color: #888;
+	}
+	img.gravatar[src*=placeholder] {
+		/* background: #CCC; /* invert(#444) = #BBB */
+		/* filter: invert(0.9); */
+	}
+	
+	/* hyperlinks */
+	a, #footer a {
+		color: #BA478F; /* MB brand color */
+	}
+	a:visited {
+		color: #FF0099;
+	}
+	a:hover {
+		color: #EB743B; /* MB brand color */
+	}
+	h1 a {
+		color: #ddd !important;
+	}
+	
+	/* highlights */
+	.negative {
+		background: #500;
+	}
+	.positive {
+		background: #050;
+	}
+	.diff, .diff-only-a, .diff-only-b, td.old, td.new {
+		color: initial;
+	}
+	
+	/* documentation */
+	.wikicontent #toc h2 {
+		color: inherit;
+	}
+	.wikicontent table.wikitable th, .wikicontent table[border^="1"] th {
+		background: #333;
+	}
+	.wikicontent table.wikitable tr:nth-child(2n) td, .wikicontent table[border^="1"] tr:nth-child(2n) td {
+		background: #222;
+	}
+	.wikicontent table.wikitable th, .wikicontent table[border^="1"] th,
+	.wikicontent table.wikitable td, .wikicontent table[border^="1"] td {
+		border-color: #777;
+	}
+	.mw-parser-output > table:nth-child(1) {
+		color: initial;
+		filter: brightness(70%);
+	}
+	
+	/* userscript fixes */
+	label[title^="saves edit note"] { /* jesus2099 ELEPHANT EDITOR */
+		color: initial;
+	}
+	input[value=×] { /* jesus2099 ELEPHANT EDITOR */
+		filter: none;
+	}
+	.header {
+		background: #111 !important; /* jesus2099 STATIC_MENU */
+	}
+	div#MMR2099userjs120382 { /* jesus2099 MASS MERGE RECORDINGS */
+		color: initial;
+	}
+	#jesus2099userjs85790j2sets {
+		color: black;
+	}
+	/* TODO: jesus2099 TAG TOOLS still unreadable: ↙mine and others’ */
+	#jesus2099userjs85790j2sets a:link {
+		color: revert;
+	}
+	#loujine-sidebar, #loujine-menu {
+		background: inherit !important;
+	}
+}
