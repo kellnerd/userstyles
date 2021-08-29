@@ -3,7 +3,7 @@
 		background: #111;
 		color: #DDD;
 	}
-	
+
 	/* banner messages, artwork container (homepage), artist discography filter etc. */
 	.banner,
 	div.artwork-cont,
@@ -22,7 +22,7 @@
 		background: #884;
 		color: initial;
 	}
-	
+
 	/* header menu & tabs */
 	.header .right ul.menu > li .menu-header, #footer-menu {
 		filter: contrast(2);
@@ -39,7 +39,7 @@
 		background-color: #555;
 		border-color: #555;
 	}
-	
+
 	/* table headers and stripes */
 	table.tbl {
 		border-color: #666;
@@ -62,7 +62,7 @@
 	table.tbl tr.even td, table.tbl tr.even th {
 		background: #222;
 	}
-	
+
 	/* entity pages */
 	#sidebar, li.separator {
 		border-color: #555;
@@ -88,7 +88,7 @@
 	thead tr.mp {
 		filter: invert(1);
 	}
-	
+
 	/* release editor */
 	/* tabs */
 	.ui-tabs .ui-tabs-nav {
@@ -181,7 +181,7 @@
 	.content-loading {
 		filter: invert(1); /* no white placeholders for images, also inverts animation */
 	}
-	
+
 	/* editor statistics */
 	table.statistics th, table.statistics td {
 		border-color: #777;
@@ -190,7 +190,7 @@
 		background: #333;
 		color: #EB743B; /* do not interfere with jesus2099 USER_STATS highlight colors */
 	}
-	
+
 	/* tags and genres */
 	#all-tags .genre-list li.even, #all-tags .tag-list li.even, .all-tags .genre-list li.even, .all-tags .tag-list li.even {
 		background: #222;
@@ -201,7 +201,7 @@
 	.tag-upvoted .tag-count, .tag-downvoted .tag-count {
 		color: initial;
 	}
-	
+
 	/* form elements */
 	input, select, textarea, button, .buttons a {
 		filter: invert(0.9) hue-rotate(180deg); /* make it dark but keep the color tone */
@@ -215,7 +215,7 @@
 	thead input, tr.subh input {
 		filter: hue-rotate(180deg); /* already inverted through thead / tr.subh */
 	}
-	
+
 	/* relationship editor */
 	#content.rel-editor span.link-phrase {
 		color: inherit;
@@ -227,7 +227,7 @@
 	.rel-edit, .rel-add, .rel-remove {
 		color: initial;
 	}
-	
+
 	/* pagination */
 	nav .pagination a {
 		background: inherit;
@@ -238,7 +238,7 @@
 		color: #777;
 		border-color: #888;
 	}
-	
+
 	/* voting interface */
 	.edit-list {
 		background: #333;
@@ -258,7 +258,7 @@
 		color: initial;
 		filter: brightness(80%); /* darken colored edit headers */
 	}
-	
+
 	/* user avatars */
 	img.gravatar {
 		background: inherit;
@@ -268,7 +268,7 @@
 		border-color: #BBB;
 		filter: brightness(0.7);
 	}
-	
+
 	/* hyperlinks */
 	a, #footer a, .btn-link, #content.rel-editor .btn {
 		color: #95F;
@@ -279,7 +279,7 @@
 	h1 a {
 		color: #DDD !important;
 	}
-	
+
 	/* highlights */
 	.annotation-details, .lastupdate, .small {
 		color: #999;
@@ -307,7 +307,7 @@
 	span.mp .tooltip-content {
 		color: #DDD; /* revert above changes for the tooltips */
 	}
-	
+
 	/* documentation */
 	.wikicontent #toc h2 {
 		color: inherit;
@@ -326,34 +326,46 @@
 		color: initial;
 		filter: brightness(70%);
 	}
-	
-	/* userscript fixes */
-	label[title^="saves edit note"] { /* jesus2099 ELEPHANT EDITOR */
+
+	/*** userscript fixes ***/
+
+	/* jesus2099 ELEPHANT EDITOR */
+	label[title^="saves edit note"] {
 		color: initial;
 	}
-	input[value=×] { /* jesus2099 ELEPHANT EDITOR */
+	input[value=×] {
 		filter: none;
 	}
+
+	/* jesus2099 SUPER MIND CONTROL */
 	.header {
 		background: #111 !important; /* jesus2099 STATIC_MENU */
-	}
-	div#MMR2099userjs120382 { /* jesus2099 MASS MERGE RECORDINGS */
-		color: initial;
 	}
 	#jesus2099userjs85790j2sets {
 		color: black;
 	}
-	/* TODO: jesus2099 TAG TOOLS still unreadable: ↙mine and others’ */
 	#jesus2099userjs85790j2sets a:link {
 		color: revert;
 	}
-	a[jesus2099userjs81127recname] { /* jesus2099 INLINE STUFF */
+	/* TODO: jesus2099 TAG TOOLS still unreadable: ↙mine and others’ */
+
+	/* jesus2099 MASS MERGE RECORDINGS */
+	div#MMR2099userjs120382, form.MMR2099userjs120382 {
+		color: initial;
+	}
+
+	/* jesus2099 INLINE STUFF */
+	a[jesus2099userjs81127recname] {
 		color: red;
 	}
+
+	/* loujine */
 	#loujine-sidebar, #loujine-menu {
 		background: inherit !important;
 	}
-	td.relationships a img { /* murdos relationship shortcuts */
+
+	/* murdos relationship shortcuts */
+	td.relationships a img {
 		filter: drop-shadow(0 0 2px #999); /* black icons become invisible otherwise */
 	}
 }
