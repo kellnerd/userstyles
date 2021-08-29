@@ -1,6 +1,6 @@
 @-moz-document domain("musicbrainz.org") {
 	body {
-		background: #111;
+		background: #333;
 		color: #DDD;
 	}
 
@@ -14,7 +14,7 @@
 	.wikicontent #toc, .wikicontent .toc,
 	#drop-zone,
 	#filter {
-		background: #222;
+		background: #444;
 		border-color: #666;
 	}
 	div.caa-warning, div.warning {
@@ -25,24 +25,24 @@
 
 	/* header menu & tabs */
 	.header .right ul.menu > li .menu-header, #footer-menu {
-		filter: contrast(2);
+		filter: contrast(1.5);
 	}
 	.header .right ul.menu li ul li {
 		background-color: #444;
 	}
 	.header .right ul.menu li ul li a, div.tabs, div.tabs ul li a {
 		color: inherit;
-		border-color: #555;
+		border-color: #666;
 	}
 	div.tabs ul li.disabled a {
 		color: #DDD;
-		background-color: #555;
-		border-color: #555;
+		background-color: #666;
+		border-color: #666;
 	}
 
 	/* table headers and stripes */
 	table.tbl {
-		border-color: #666;
+		border-color: #777;
 		border-top-width: 2px; /* inversion of thead hides 1px border!? */
 	}
 	table.tbl thead, table.tbl .subh {
@@ -60,18 +60,15 @@
 		color: #111; /* invert(#DDD) = #222 */
 	}
 	table.tbl tr.even td, table.tbl tr.even th {
-		background: #222;
+		background: #444;
 	}
 
 	/* entity pages */
 	#sidebar, li.separator {
-		border-color: #555;
-	}
-	#sidebar ul.external_links li {
-		filter: drop-shadow(0 0 5px #999); /* black icons become invisible otherwise */
+		border-color: #666;
 	}
 	.annotation-collapsed::after, .collapsed::after, .review-collapsed::after, .wikipedia-extract-collapsed::after {
-		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, #111 100%) !important;
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, #333 100%) !important;
 	}
 	span.caa-icon {
 		filter: invert(0.9);
@@ -91,22 +88,21 @@
 	/* release editor */
 	/* tabs */
 	.ui-tabs .ui-tabs-nav {
-		background: #333;
+		background: #555;
 	}
 	.ui-tabs .ui-tabs-nav li {
-		background: #111;
+		background: #333;
 	}
 	.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
-		border-color: #666;
+		border-color: #777;
 	}
 	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-		border-color: #444;
+		border-color: #666;
 	}
 	.ui-tabs-nav .ui-state-default {
-		border-color: #333 !important;
+		border-color: #555 !important;
 	}
-	.ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited,
-	.ui-state-active a, .ui-state-active a:hover, .ui-state-active a:link, .ui-state-active a:visited {
+	.ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited {
 		color:#DDD;
 	}
 	#release-editor .error-tab {
@@ -114,54 +110,60 @@
 	}
 	/* bubbles, tooltips & dialogs */
 	.bubble {
-		background: #333;
+		background: #555;
 	}
 	.bubble.left-tail::before, .bubble.right-tail::after {
-		border-right-color: #333;
-		border-left-color: #333;
+		border-right-color: #555;
+		border-left-color: #555;
 	}
 	.tooltip-container .tooltip-content {
-		background: #111;
-		border-color: #333;
-		box-shadow: 0 2px 5px #333;
+		background: #333;
+		border-color: #555;
+		box-shadow: 0 2px 5px #555;
 	}
 	.tooltip-container .tooltip-triangle:before {
-		border-right-color: #333;
+		border-right-color: #555;
 	}
 	.tooltip-container .tooltip-triangle:after {
-		border-right-color: #111;
+		border-right-color: #555;
 	}
 	.dialog {
-		background: #111;
-		border-color: #555;
+		background: #333;
+		border-color: #666;
 	}
 	.dialog.popover div[data-popper-arrow]::before {
-		background: #111;
+		background: #333;
 	}
 	.dialog.popover[data-popper-placement^="right"] > div[data-popper-arrow]::before {
-		border-color: #555;
+		border-color: #666;
 	}
 	/* tracklist tab */
 	#release-editor .medium.tbl tr.track td {
 		background: inherit;
-		border-color: #444;
+		border-color: #555;
+	}
+	#release-editor #recordings fieldset {
+		border-color: #666;
 	}
 	#release-editor #recordings fieldset table tr.even td {
-		background: #222;
+		background: #444;
 	}
 	table.tbl .data-track.icon {
 		filter: invert(1);
 	}
 	/* icons */
-	button.icon.guesscase-title, button.icon.guessfeat, img[src*=guesscase],
+	button.icon.guesscase-title, button.icon.guesscase-sortname, button.icon.guessfeat, img[src*=guesscase],
 	button.icon[class*=down], button.icon[class*=up],
-	button.icon.copy-date, button.icon.add-item,
+	button.icon.copy-date, button.icon.sortname-copy, button.icon.add-item,
 	button.icon.collapse-medium, button.icon.expand-medium,
 	.help {
 		filter: invert(0.9) hue-rotate(180deg);
 	}
 	span.autocomplete img.search {
-		filter: invert(0.9);
+		filter: invert(0.5); /* visible when empty and after lookup was performed */
+	}
+	#external-links-editor span.favicon {
+		filter: drop-shadow(0 0 2px #999); /* black icons become invisible otherwise */
 	}
 	/* popup dialog widget (autocomplete, cover art gallery) */
 	.ui-menu .ui-menu-item a {
@@ -175,7 +177,7 @@
 	}
 	.ui-widget-content {
 		background: inherit;
-		border-color: #555;
+		border-color: #666;
 	}
 	.content-loading {
 		filter: invert(1); /* no white placeholders for images, also inverts animation */
@@ -183,25 +185,33 @@
 
 	/* editor statistics */
 	table.statistics th, table.statistics td {
-		border-color: #777;
+		border-color: #888;
 	}
 	table.statistics th {
-		background: #333;
+		background: #555;
 	}
 
 	/* tags and genres */
 	#all-tags .genre-list li.even, #all-tags .tag-list li.even, .all-tags .genre-list li.even, .all-tags .tag-list li.even {
-		background: #222;
+		background: #444;
 	}
 	.tag-count {
-		background: #444;
+		background: #666;
 	}
 	.tag-upvoted .tag-count, .tag-downvoted .tag-count {
 		color: initial;
 	}
 
 	/* form elements */
-	input, select, textarea, button, .buttons a {
+	input, textarea {
+		border-color: #777;
+	}
+	input[type=text]:not(.lookup-performed), input[type=url], textarea {
+		background: #222;
+		color: #DDD;
+	}
+	input[type=number], input[type=radio], input[type=checkbox], input[type=button],
+	select, button, .buttons a {
 		filter: invert(0.9) hue-rotate(180deg); /* make it dark but keep the color tone */
 	}
 	.buttons a:visited {
@@ -210,7 +220,7 @@
 	button.icon, button.tag-vote { /* exceptions */
 		filter: none;
 	}
-	thead input, tr.subh input {
+	thead input[type=checkbox], tr.subh input[type=checkbox] {
 		filter: hue-rotate(180deg); /* already inverted through thead / tr.subh */
 	}
 
@@ -230,19 +240,20 @@
 	nav .pagination a {
 		background: inherit;
 		color: inherit;
+		border-color: #888;
 	}
 	nav .pagination span { /* disabled previous/next button */
-		background: #333;
-		color: #777;
-		border-color: #888;
+		background: #666;
+		color: #999;
+		border-color: #777;
 	}
 
 	/* voting interface */
 	.edit-list {
-		background: #333;
+		background: #444;
 	}
 	.edit-notes .edit-note h3 {
-		background: #444;
+		background: #555;
 		color: #DDD;
 	}
 	.edit-notes .edit-note .date {
@@ -264,7 +275,7 @@
 	}
 	img.gravatar[src*=placeholder] {
 		border-color: #BBB;
-		filter: brightness(0.7);
+		filter: brightness(0.8);
 	}
 
 	/* hyperlinks */

@@ -21,14 +21,22 @@
 		color: initial;
 	}
 
+	/* jesus2099 PRINT ALL PAGES */
+	a[title^="mb. PRINT ALL PAGES"] {
+		color: initial !important;
+	}
+
 	/* jesus2099 SUPER MIND CONTROL */
 	#jesus2099userjs85790j2sets, #jesus2099userjs85790j2sets th {
-		background: #333 !important; /* settings */
+		background: #444 !important; /* settings */
+	}
+	input[placeholder="YYY+"] { /* EASY_DATE */
+		color: initial;
 	}
 	.header { /* jesus2099 STATIC_MENU */
-		background: #111 !important;
-		box-shadow: #111 0px 10px 5px 8px !important;
-		border-bottom-color: #111 !important;
+		background: #333 !important;
+		box-shadow: #333 0px 10px 5px 8px !important;
+		border-bottom-color: #333 !important;
 	}
 	table.statistics th {
 		color: #EB743B; /* USER_STATS: do not interfere with highlight colors */
