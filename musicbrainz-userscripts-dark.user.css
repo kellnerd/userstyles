@@ -25,13 +25,21 @@
 	#jesus2099userjs85790j2sets, #jesus2099userjs85790j2sets th {
 		background: #333 !important; /* settings */
 	}
-	.header {
-		background: #111 !important; /* jesus2099 STATIC_MENU, TODO: box-shadow */
+	.header { /* jesus2099 STATIC_MENU */
+		background: #111 !important;
+		box-shadow: #111 0px 10px 5px 8px !important;
+		border-bottom-color: #111 !important;
 	}
 	table.statistics th {
 		color: #EB743B; /* USER_STATS: do not interfere with highlight colors */
 	}
-	/* TODO: TAG TOOLS: "↙mine and others’" unreadable */
+	/* TAG_TOOLS: make "↙mine and others’" readable */
+	#sidebar > div[style="position: relative; bottom: -1rem; color: black; font-weight: normal; float: right;"] {
+		color: #DDD !important;
+	}
+	#sidebar > div > span[style="background-color: rgb(177, 235, 176);"] {
+		color: initial;
+	}
 
 	/* kellnerd guess punctuation */
 	button.icon.guess-punctuation {
