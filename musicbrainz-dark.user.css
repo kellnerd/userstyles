@@ -78,14 +78,6 @@
 		filter: invert(0.9);
 	}
 
-	/* pending edits highlight */
-	td > span.mp, h1 span.mp a, .artwork-cont.mp {
-		color: initial !important; /* highlight makes light text unreadable */
-	}
-	span.mp .tooltip-content {
-		color: #DDD; /* revert above changes for the tooltips */
-	}
-	
 	/* release page */
 	table.tbl.medium tr:not(.mp) .expand-triangle {
 		filter: invert(1);
@@ -303,6 +295,13 @@
 	}
 	a .diff-only-a, a .diff-only-b {
 		color: inherit;
+	}
+	/* pending edits highlight */
+	td > span.mp, h1 > span.mp > a, tr.mp > td, .artwork-cont.mp {
+		color: initial !important; /* highlight makes light text unreadable */
+	}
+	span.mp .tooltip-content {
+		color: #DDD; /* revert above changes for the tooltips */
 	}
 	
 	/* documentation */
