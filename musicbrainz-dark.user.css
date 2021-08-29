@@ -225,9 +225,6 @@
 	}
 	
 	/* relationship editor */
-	#content.rel-editor .btn {
-		color: #BA478F; /* = link color */
-	}
 	#content.rel-editor span.link-phrase {
 		color: inherit;
 	}
@@ -281,17 +278,14 @@
 	}
 	
 	/* hyperlinks */
-	a, #footer a {
-		color: #BA478F; /* MB brand color */
+	a, #footer a, .btn-link, #content.rel-editor .btn {
+		color: #95F;
 	}
 	a:visited {
-		color: #FF0099;
-	}
-	a:hover {
-		color: #EB743B; /* MB brand color */
+		color: #F3F;
 	}
 	h1 a {
-		color: #ddd !important;
+		color: #DDD !important;
 	}
 	
 	/* highlights */
@@ -306,6 +300,9 @@
 	}
 	.diff, .diff-only-a, .diff-only-b, td.old, td.new {
 		color: initial;
+	}
+	a .diff-only-a, a .diff-only-b {
+		color: inherit;
 	}
 	
 	/* documentation */
