@@ -296,6 +296,10 @@
 	a .diff-only-a, a .diff-only-b {
 		color: inherit;
 	}
+	::selection {
+		color: #DDD;
+		background: #BA478F; /* MB branding color */
+	}
 	/* pending edits highlight */
 	td > span.mp, h1 > span.mp > a, tr.mp > td, .artwork-cont.mp {
 		color: initial !important; /* highlight makes light text unreadable */
