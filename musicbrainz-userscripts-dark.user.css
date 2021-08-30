@@ -15,6 +15,9 @@
 	a[jesus2099userjs81127recname] {
 		color: red;
 	}
+	a[href^="/isrc/"][style] {
+		background-color: #707 !important; /* duplicate ISRC highlight */
+	}
 
 	/* jesus2099 MASS MERGE RECORDINGS */
 	div#MMR2099userjs120382, form.MMR2099userjs120382 {
