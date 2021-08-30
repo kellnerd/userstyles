@@ -271,9 +271,12 @@
 		color: initial;
 		background-color: #777;
 	}
+	/* TODO: convert individual colors of the edit headers to be compatible with custom link colors */
 	.edit-header {
 		color: initial;
-		filter: brightness(80%); /* darken colored edit headers */
+	}
+	.edit-header a, .edit-header a:visited, .edit-header a:hover {
+		color: revert; /* use default link colors */
 	}
 
 	/* user avatars */
@@ -286,12 +289,15 @@
 		filter: brightness(0.8);
 	}
 
-	/* hyperlinks */
+	/* hyperlinks, have to be visible on dark background and on all highlight colors */
 	a, #footer a, .btn-link, #content.rel-editor .btn {
-		color: #95F;
+		color: #3BF;
 	}
 	a:visited {
 		color: #F3F;
+	}
+	a:focus, a:hover { /* declare this again because it is overwritten by the above rules */
+		color: #EB743B; /* MB brand color */
 	}
 	h1 a {
 		color: #DDD !important;
@@ -299,30 +305,30 @@
 
 	/* highlights */
 	.annotation-details, .lastupdate, .small {
-		color: #999;
+		color: #BBB;
 	}
-	.negative {
-		background: #500;
+	table.details td span.new, table.details td span.old, table.details td.new, table.details td.old {
+		border-color: #666;
 	}
-	.positive {
-		background: #050;
+	.negative, tr.diff-removal, table.details td span.old, table.details td.old {
+		background: #522;
 	}
-	.diff, .diff-only-a, .diff-only-b, td.old, td.new {
-		color: initial;
+	div.diff .diff-only-a, span.diff-only-a {
+		background: #855;
 	}
-	a .diff-only-a, a .diff-only-b {
-		color: inherit;
+	.positive, tr.diff-addition, table.details td span.new, table.details td.new {
+		background: #252;
+	}
+	div.diff .diff-only-b, span.diff-only-b {
+		background: #585;
 	}
 	::selection {
 		color: #DDD;
 		background: #BA478F; /* MB branding color */
 	}
 	/* pending edits highlight */
-	td > span.mp, h1 > span.mp > a, tr.mp > td, .artwork-cont.mp {
-		color: initial !important; /* highlight makes light text unreadable */
-	}
-	span.mp .tooltip-content {
-		color: #DDD; /* revert above changes for the tooltips */
+	div.mp,	span.mp, table.tbl tr.mp td, table.tbl tr.mp th, tr.diff-changes {
+		background: #04C !important;
 	}
 
 	/* documentation */
