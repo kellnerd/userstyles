@@ -85,7 +85,7 @@
 		filter: invert(1);
 	}
 
-	/* release editor */
+	/* release editor & other entity edit pages */
 	/* tabs */
 	.ui-tabs .ui-tabs-nav {
 		background: #555;
@@ -142,7 +142,7 @@
 		background: inherit;
 		border-color: #555;
 	}
-	#release-editor #recordings fieldset {
+	#release-editor #recordings fieldset, div.half-width fieldset {
 		border-color: #666;
 	}
 	#release-editor #recordings fieldset table tr.even td {
@@ -156,8 +156,11 @@
 	button.icon[class*=down], button.icon[class*=up],
 	button.icon.copy-date, button.icon.sortname-copy, button.icon.add-item,
 	button.icon.collapse-medium, button.icon.expand-medium,
-	.help {
+	.help, .loading-message {
 		filter: invert(0.9) hue-rotate(180deg);
+	}
+	.loading-message {
+		color: initial; /* make message visible again */
 	}
 	span.autocomplete img.search {
 		filter: invert(0.5); /* visible when empty and after lookup was performed */
@@ -206,7 +209,8 @@
 	input, textarea {
 		border-color: #777;
 	}
-	input[type=text]:not(.lookup-performed), input[type=url], textarea {
+	input[type=text]:not(.lookup-performed), input:not([type]),
+	input[type=url], input[type=password], textarea {
 		background: #222;
 		color: #DDD;
 	}
@@ -214,14 +218,18 @@
 	select, button, .buttons a {
 		filter: invert(0.9) hue-rotate(180deg); /* make it dark but keep the color tone */
 	}
-	.buttons a:visited {
-		color: #666; /* do net let visited buttons look different */
-	}
-	button.icon, button.tag-vote { /* exceptions */
+	button.icon, button.tag-vote, .btn-link { /* exceptions */
 		filter: none;
 	}
 	thead input[type=checkbox], tr.subh input[type=checkbox] {
 		filter: hue-rotate(180deg); /* already inverted through thead / tr.subh */
+	}
+	/* do net let visited buttons look different */
+	.buttons a:visited {
+		color: #666;
+	}
+	.buttons a:focus, .buttons a:hover {
+		color: #369; /* declare this again because it is overwritten by the above rule */
 	}
 
 	/* relationship editor */
