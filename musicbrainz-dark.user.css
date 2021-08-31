@@ -20,7 +20,6 @@
 	div.caa-warning, div.warning {
 		border-color: #666;
 		background: #884;
-		color: initial;
 	}
 
 	/* header menu & tabs */
@@ -125,7 +124,7 @@
 		border-right-color: #555;
 	}
 	.tooltip-container .tooltip-triangle:after {
-		border-right-color: #555;
+		border-right-color: #333;
 	}
 	.dialog {
 		background: #333;
@@ -241,6 +240,9 @@
 	#content.rel-editor span.link-phrase.rel-add,
 	#content.rel-editor span.link-phrase.rel-remove,
 	.rel-edit, .rel-add, .rel-remove {
+		color: initial;
+	}
+	#content.rel-editor .warning, div.rel-editor-dialog .warning {
 		color: initial;
 	}
 
