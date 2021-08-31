@@ -1,6 +1,11 @@
 @-moz-document domain("musicbrainz.org") {
 	/* additional style fixes for some popular userscripts, use together with musicbrainz-dark.user.css */
 
+	/* bitmap batch-add performance of relationships */
+	table#bpr-container {
+		background: #444 !important;
+	}
+
 	/* jesus2099 ELEPHANT EDITOR */
 	label[title^="saves edit note"] {
 		color: initial;
