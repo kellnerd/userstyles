@@ -269,6 +269,12 @@
 	.edit-notes .edit-note .date {
 		color: #BBB;
 	}
+	.edit-notes .modbot {
+		color: #AAA;
+	}
+	.edit-notes .modbot a {
+		color: #888;
+	}
 	.edit-list .edit-actions {
 		color: initial;
 		background-color: #777;
