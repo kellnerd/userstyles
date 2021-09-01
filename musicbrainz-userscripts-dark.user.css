@@ -6,6 +6,11 @@
 		background: #444 !important;
 	}
 
+	/* jesus2099 COLLECTION HIGHLIGHTER */
+	#collectionHighlighterModal {
+		background: #444 !important;
+	}
+
 	/* jesus2099 ELEPHANT EDITOR */
 	label[title^="saves edit note"] {
 		color: initial;
