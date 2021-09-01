@@ -11,7 +11,6 @@
 	.search-help, .form-help,
 	div.ar-descr,
 	.add-edit-note .edit-note-help,
-	.wikicontent #toc, .wikicontent .toc,
 	#drop-zone,
 	#filter {
 		background: #444;
@@ -208,11 +207,11 @@
 		border-color: #777;
 	}
 	input[type=text]:not(.lookup-performed):not(.success):not(.error), input:not([type]),
-	input[type=url], input[type=password], textarea {
+	input[type=url], input[type=search], input[type=password], textarea {
 		background: #222;
 		color: #DDD;
 	}
-	input[type=number], input[type=radio], input[type=checkbox], input[type=button],
+	input[type=number], input[type=radio], input[type=checkbox], input[type=button], input[type=submit],
 	select, button, .buttons a {
 		filter: invert(0.9) hue-rotate(180deg); /* make it dark but keep the color tone */
 	}
@@ -311,7 +310,7 @@
 	}
 
 	/* highlights */
-	.annotation-details, .lastupdate, .small {
+	.annotation-details, .lastupdate, .small, #footer {
 		color: #BBB;
 	}
 	table.details td span.new, table.details td span.old, table.details td.new, table.details td.old {
@@ -338,22 +337,67 @@
 		background: #04C !important;
 	}
 
-	/* documentation */
-	.wikicontent #toc h2 {
+	/* documentation & wiki pages */
+	body.mediawiki {
+		background: #111;
+	}
+	body.mediawiki div#globalWrapper {
+		background-image: none;
+	}
+	.mw-body, .portlet, .portlet .pBody {
+		background: #333;
 		color: inherit;
 	}
-	.wikicontent table.wikitable th, .wikicontent table[border^="1"] th {
-		background: #333;
+	.wikicontent #toc, .wikicontent .toc,
+	.mw-body #toc, .mw-body .toc,
+	.mw-body .catlinks, .mw-changeslist-legend {
+		background: #444;
+		border-color: #666;
 	}
-	.wikicontent table.wikitable tr:nth-child(2n) td, .wikicontent table[border^="1"] tr:nth-child(2n) td {
-		background: #222;
+	.wikicontent #toc h2, .mw-body #toc h2,
+	.mw-body .tocnumber, .mw-body h1, .mw-body h3, .mw-body h4, .portlet h3 {
+		color: inherit;
+	}
+	.mw-body .tocnumber, #p-personal li a {
+		color: #DDD;
+	}
+	table.wikitable {
+		color: inherit;
+		background: inherit;
 	}
 	.wikicontent table.wikitable th, .wikicontent table[border^="1"] th,
-	.wikicontent table.wikitable td, .wikicontent table[border^="1"] td {
+	.mw-body table.wikitable th, .mw-body table[border^="1"] th {
+		background-color: #444;
+	}
+	table.jquery-tablesorter th {
+		background-color: #BBB !important;
+		color: #222;
+		filter: invert(1);
+	}
+	.wikicontent table.wikitable tr:nth-child(2n) td, .wikicontent table[border^="1"] tr:nth-child(2n) td,
+	.mw-body table.wikitable tr:nth-child(2n+1) td, .mw-body table[border^="1"] tr:nth-child(2n+1) td {
+		background: #444;
+	}
+	.mbwiki-navbox-rowtitle {
+		background-color: #333;
+	}
+	.wikicontent table.wikitable th, .wikicontent table[border^="1"] th,
+	.wikicontent table.wikitable td, .wikicontent table[border^="1"] td,
+	.mw-body table.wikitable th, .mw-body table[border^="1"] th,
+	.mw-body table.wikitable td, .mw-body table[border^="1"] td {
 		border-color: #777;
 	}
 	.mw-parser-output > table:nth-child(1) {
 		color: initial;
 		filter: brightness(70%);
+	}
+	.mw-body fieldset {
+		border-color: #BBB;
+	}
+	a.external, a.external:active, a.external:focus, a.extiw, a.extiw:active, a.extiw:focus, a:active, a:focus {
+		color: #3BF !important;
+	}
+	#mw-indicator-mw-helplink a {
+		filter: invert(0.9) hue-rotate(180deg); /* invert icon */
 	}
 }
