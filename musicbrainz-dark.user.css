@@ -228,6 +228,18 @@
 	.buttons a:focus, .buttons a:hover {
 		color: #369; /* declare this again because it is overwritten by the above rule */
 	}
+	/* increase contrast of buttons: lighten outline/text => use darker inverted colors (subtract #333) */
+	.buttons a, .buttons button, .styled-button {
+		color: #333;
+		border-color: #999;
+		border-top-color: #BBB;
+		border-left-color: #BBB;
+	}
+	.buttons a:focus, .buttons a:hover, .buttons button:focus, .buttons button:hover, .styled-button:focus, .styled-button:hover {
+		background-color: #AFC4CF;
+		border-color: #62919F;
+		color: #036;
+	}
 
 	/* relationship editor */
 	#content.rel-editor span.link-phrase {
