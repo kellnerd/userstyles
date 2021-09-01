@@ -92,14 +92,14 @@
 	.ui-tabs .ui-tabs-nav li {
 		background: #333;
 	}
-	.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
-		border-color: #777;
+	.ui-tabs-nav .ui-state-default {
+		border-bottom-color: #555 !important; /* = .ui-tabs-nav background color */
 	}
 	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
 		border-color: #666;
 	}
-	.ui-tabs-nav .ui-state-default {
-		border-color: #555 !important;
+	.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+		border-color: #888;
 	}
 	.ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited {
 		color:#DDD;
@@ -172,8 +172,7 @@
 		color: inherit;
 	}
 	.ui-menu .ui-menu-item a:hover,
-	.ui-widget-content:not(.ui-tabs) .ui-state-focus {
-		/* TODO causes problems with add medium tabs */
+	.ui-widget-content.ui-autocomplete .ui-state-focus {
 		color: #111; /* invert(#222) = #DDD */
 		filter: invert(0.9);
 	}
