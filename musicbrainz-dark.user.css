@@ -4,21 +4,21 @@
 		color: #DDD;
 	}
 
-	/* banner messages, artwork container (homepage), artist discography filter etc. */
-	.banner,
-	div.artwork-cont,
-	div.thumb-position,
-	.search-help, .form-help,
-	div.ar-descr,
-	.add-edit-note .edit-note-help,
-	#drop-zone,
-	#filter {
+	/* various emphasized boxes */
+	.banner, /* banner messages */
+	div.artwork-cont, /* cover art container */
+	div.thumb-position, /* reorder cover art */
+	.search-help, /* editing history help box */
+	div.ar-descr, .form-help, /* help boxes for relationship & attribute types */
+	.add-edit-note .edit-note-help, /* edit notes help box */
+	#drop-zone, /* add cover art */
+	#filter /* artist discography filter */	{
 		background: #444;
 		border-color: #666;
 	}
 	div.caa-warning, div.warning {
-		border-color: #666;
 		background: #884;
+		border-color: #666;
 	}
 
 	/* header menu & tabs */
