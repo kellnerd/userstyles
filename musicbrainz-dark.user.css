@@ -255,6 +255,14 @@
 	#content.rel-editor .warning, div.rel-editor-dialog .warning {
 		color: initial;
 	}
+	/* relationship attribute multi-select (vocal type) */
+	div.multiselect > div.menu, div.multiselect > div.items a {
+		background: #555;
+		border-color: #777;
+	}
+	div.multiselect > div.menu > a {
+		color: inherit;
+	}
 
 	/* pagination */
 	nav .pagination a {
