@@ -359,6 +359,10 @@
 	div.mp,	span.mp, table.tbl tr.mp td, table.tbl tr.mp th, tr.diff-changes {
 		background: #04C !important;
 	}
+	/* automatic removal warning for unused entities */
+	p.cleanup {
+		color: initial;
+	}
 
 	/* documentation & wiki pages */
 	body.mediawiki {
