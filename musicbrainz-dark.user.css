@@ -54,6 +54,9 @@
 	table.tbl .subh a { /* medium sections in disc id table */
 		filter: invert(1);
 	}
+	table.tbl th a bdi { /* attach CD TOC RG link */
+		color: #DDD;
+	}
 	table.tbl .subh td {
 		color: #111; /* invert(#DDD) = #222 */
 	}
