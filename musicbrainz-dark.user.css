@@ -65,7 +65,7 @@
 	}
 
 	/* entity pages */
-	#sidebar, li.separator {
+	#sidebar, li.separator, .set-cover-art div.editimage {
 		border-color: #666;
 	}
 	.annotation-collapsed::after, .collapsed::after, .review-collapsed::after, .wikipedia-extract-collapsed::after {
@@ -73,6 +73,10 @@
 	}
 	span.caa-icon {
 		filter: invert(0.9);
+	}
+	.set-cover-art div.editimage.selected {
+		background: #252;
+		border-color: #777;
 	}
 
 	/* release page */
