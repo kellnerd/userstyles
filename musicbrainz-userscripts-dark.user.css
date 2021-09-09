@@ -1,4 +1,4 @@
-@-moz-document domain("musicbrainz.org") {
+@-moz-document regexp("https?://((beta|test)\\.)?musicbrainz\\.org(.*)") {
 	/* additional style fixes for some popular userscripts, use together with musicbrainz-dark.user.css */
 
 	/* bitmap batch-add performance of relationships */

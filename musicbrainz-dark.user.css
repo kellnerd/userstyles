@@ -1,4 +1,4 @@
-@-moz-document domain("musicbrainz.org") {
+@-moz-document regexp("https?://((beta|test|wiki)\\.)?musicbrainz\\.org(.*)") {
 	body {
 		background: #333;
 		color: #DDD;
