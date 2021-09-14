@@ -214,7 +214,7 @@
 		border-color: #777;
 	}
 	input[type=text]:not(.lookup-performed):not(.success):not(.error), input:not([type]),
-	input[type=url], input[type=search], input[type=password], textarea {
+	input[type=url], input[type=search], input[type=password], input[type=email], textarea {
 		background: #222;
 		color: #DDD;
 	}
