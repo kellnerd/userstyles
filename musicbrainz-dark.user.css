@@ -385,6 +385,9 @@
 		background: #444;
 		border-color: #666;
 	}
+	.wikicontent code {
+		background: #555;
+	}
 	.wikicontent #toc h2, .mw-body #toc h2,
 	.mw-body .tocnumber, .mw-body h1, .mw-body h3, .mw-body h4, .portlet h3 {
 		color: inherit;
