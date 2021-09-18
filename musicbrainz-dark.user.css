@@ -54,7 +54,7 @@
 	table.tbl .subh a { /* medium sections in disc id table */
 		filter: invert(1);
 	}
-	table.tbl th a bdi { /* attach CD TOC RG link */
+	table.tbl th a > bdi { /* attach CD TOC RG link, but not medium titles */
 		color: #DDD;
 	}
 	table.tbl .subh td {
