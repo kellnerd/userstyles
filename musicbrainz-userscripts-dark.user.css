@@ -76,4 +76,9 @@
 	td.relationships a img {
 		filter: drop-shadow(0 0 2px #999); /* black icons become invisible otherwise */
 	}
+
+	/* ROpdebee enhanced cover art upload */
+	.ROpdebee_import_url_buttons button img {
+		filter: hue-rotate(180deg) invert(1); /* undo button inversion */
+	}
 }
