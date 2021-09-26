@@ -81,4 +81,12 @@
 	.ROpdebee_import_url_buttons button img {
 		filter: hue-rotate(180deg) invert(1); /* undo button inversion */
 	}
+
+	/* ROpdebee bulk copy-paste work codes */
+	#ropdebee-work-menu {
+		background: inherit !important;
+	}
+	#ropdebee-work-menu > div > div { /* log & validation error messages */
+		color: initial;
+	}
 }
