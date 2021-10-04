@@ -66,6 +66,9 @@
 	button.icon.guess-punctuation {
 		filter: invert(0.9) hue-rotate(180deg);
 	}
+	input.content-changed, textarea.content-changed {
+		color: initial !important;
+	}
 
 	/* loujine */
 	#loujine-sidebar, #loujine-menu {
