@@ -190,11 +190,11 @@
 		filter: invert(1); /* no white placeholders for images, also inverts animation */
 	}
 
-	/* editor statistics */
+	/* editor & database statistics */
 	table.statistics th, table.statistics td {
 		border-color: #888;
 	}
-	table.statistics th {
+	table.statistics th, table.database-statistics tr.thead th {
 		background: #555;
 	}
 
@@ -365,6 +365,14 @@
 	}
 	/* automatic removal warning for unused entities */
 	p.cleanup {
+		color: initial;
+	}
+
+	/* database statistics timeline */
+	.flot-text {
+		color: #BBB !important;
+	}
+	#tooltip {
 		color: initial;
 	}
 
