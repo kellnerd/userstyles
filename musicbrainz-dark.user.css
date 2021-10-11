@@ -51,8 +51,9 @@
 		border-left: 1px solid; /* TODO: no effect, left border not visible */
 		border-bottom-width: 2px; /* inversion of thead hides 1px border!? */
 	}
+	table.tbl .subh input, /* merge release tracklist tables */
 	table.tbl .subh a { /* medium sections in disc id table */
-		filter: invert(1);
+		filter: invert(1); /* "undo" inversion */
 	}
 	table.tbl th a > bdi { /* attach CD TOC RG link, but not medium titles */
 		color: #DDD;
