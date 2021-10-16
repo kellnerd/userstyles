@@ -296,6 +296,9 @@
 		background: #555;
 		color: #DDD;
 	}
+	.edit-note:target {
+		background: #884;
+	}
 	.edit-notes .edit-note .date {
 		color: #BBB;
 	}
