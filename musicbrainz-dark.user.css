@@ -275,6 +275,13 @@
 	div.multiselect > div.menu > a {
 		color: inherit;
 	}
+	/* external links editor tooltips */
+	.rel-edit .tooltip-content, .rel-add .tooltip-content, .rel-remove .tooltip-content {
+		color: #DDD;
+	}
+	.tooltip-container .tooltip-content a {
+		color: #3BF !important;
+	}
 
 	/* pagination */
 	nav .pagination a {
