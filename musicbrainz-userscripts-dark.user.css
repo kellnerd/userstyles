@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark (Userscripts)
-@version      2021.10.5
+@version      2021.11.1
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Companion for “MusicBrainz Dark” with additional style fixes for some popular userscripts.
@@ -88,9 +88,12 @@
 		filter: drop-shadow(0 0 2px #999); /* black icons become invisible otherwise */
 	}
 
-	/* ROpdebee enhanced cover art upload */
+	/* ROpdebee enhanced cover art uploads */
 	.ROpdebee_import_url_buttons button img {
 		filter: hue-rotate(180deg) invert(1); /* undo button inversion */
+	}
+	#ROpdebee_paste_url_status.info {
+		color: inherit;
 	}
 
 	/* ROpdebee bulk copy-paste work codes */
