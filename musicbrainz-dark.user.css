@@ -1,3 +1,13 @@
+/* ==UserStyle==
+@name         MusicBrainz Dark
+@version      2021.10.24
+@namespace    https://github.com/kellnerd/userstyles
+@author       kellnerd
+@description  Dark theme for MusicBrainz.
+@homepageURL  https://github.com/kellnerd/userstyles
+@license      MIT
+==/UserStyle== */
+
 @-moz-document regexp("https?://((beta|test|wiki)\\.)?musicbrainz\\.org(.*)") {
 	body {
 		background: #333;

@@ -1,6 +1,14 @@
-@-moz-document regexp("https?://((beta|test)\\.)?musicbrainz\\.org(.*)") {
-	/* additional style fixes for some popular userscripts, use together with musicbrainz-dark.user.css */
+/* ==UserStyle==
+@name         MusicBrainz Dark (Userscripts)
+@version      2021.10.5
+@namespace    https://github.com/kellnerd/userstyles
+@author       kellnerd
+@description  Companion for “MusicBrainz Dark” with additional style fixes for some popular userscripts.
+@homepageURL  https://github.com/kellnerd/userstyles
+@license      MIT
+==/UserStyle== */
 
+@-moz-document regexp("https?://((beta|test)\\.)?musicbrainz\\.org(.*)") {
 	/* bitmap batch-add performance of relationships */
 	table#bpr-container {
 		background: #444 !important;
