@@ -502,4 +502,39 @@
 		background: #222;
 		color: #D00;
 	}
+
+	/* wiki revision history */
+	#pagehistory li {
+		border-color: #333; /* same as background */
+	}
+	#pagehistory li.selected {
+		background: #444;
+		color: #CCC;
+		border-color: #777;
+	}
+	.mw-plusminus-neg {
+		color: #DB0000;
+	}
+	.mw-plusminus-pos {
+		color: #00A400;
+	}
+	.diff-context {
+		background: #444;
+		border-color: #556;
+		color: #CCC;
+	}
+
+	/* wiki revision differences */
+	.diff-addedline {
+		border-color: #478;
+	}
+	.diff-addedline .diffchange {
+		background: #456;
+	}
+	.diff-deletedline {
+		border-color: #983;
+	}
+	.diff-deletedline .diffchange {
+		background: #763;
+	}
 }
