@@ -456,10 +456,6 @@
 	.mw-body table.wikitable td, .mw-body table[border^="1"] td {
 		border-color: #777;
 	}
-	.mw-parser-output > table:nth-child(1) {
-		color: initial;
-		filter: brightness(70%);
-	}
 	.mw-body fieldset {
 		border-color: #BBB;
 	}
@@ -471,6 +467,11 @@
 	}
 	#mw-indicator-mw-helplink a {
 		filter: invert(0.9) hue-rotate(180deg); /* invert icon */
+	}
+
+	/* keep original text color for elements with inline CSS (which might affect the background) */
+	table[style], td[style] {
+		color: initial;
 	}
 
 	/* wiki tabs */
