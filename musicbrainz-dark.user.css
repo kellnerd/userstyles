@@ -537,4 +537,27 @@
 	.diff-deletedline .diffchange {
 		background: #763;
 	}
+
+	/* wiki date selector */
+	.mw-widget-dateInputWidget-handle {
+		color: inherit;
+	}
+	.mw-widget-dateInputWidget-empty .mw-widget-dateInputWidget-handle {
+		color: #999;
+	}
+	.mw-widget-dateInputWidget-calendar {
+		background: #333;
+	}
+	.mw-widget-calendarWidget-day-heading {
+		color: #999;
+	}
+	.mw-widget-calendarWidget-day {
+		color: #CCC;
+	}
+	.mw-widget-calendarWidget-day-additional {
+		color: #666;
+	}
+	.mw-widget-calendarWidget-header {
+		filter: invert(0.9);
+	}
 }
