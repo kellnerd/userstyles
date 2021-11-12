@@ -466,7 +466,34 @@
 	a.external, a.external:active, a.external:focus, a.extiw, a.extiw:active, a.extiw:focus, a:active, a:focus {
 		color: #3BF !important;
 	}
+	a.new {
+		color: #D00 !important;
+	}
 	#mw-indicator-mw-helplink a {
 		filter: invert(0.9) hue-rotate(180deg); /* invert icon */
+	}
+
+	/* wiki tabs */
+	#p-cactions li {
+		border-color: #777;
+	}
+	#p-cactions li a {
+		background: #99C;
+		color: #333;
+	}
+	#p-cactions li a:hover {
+		background: #333;
+		color: #99C;
+	}
+	#p-cactions li.selected {
+		border-color: #777 !important;
+	}
+	#p-cactions li.selected a {
+		background: #333;
+		color: #99C;
+	}
+	#p-cactions .new a {
+		background: #222;
+		color: #D00;
 	}
 }
