@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2021.10.24
+@version      2021.11.12
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -418,8 +418,10 @@
 		background: #444;
 		border-color: #666;
 	}
-	.wikicontent code {
+	.wikicontent code, .wikicontent pre,
+	.mw-body code, .mw-body pre, .mw-code {
 		background: #555;
+		color: inherit;
 	}
 	.wikicontent #toc h2, .mw-body #toc h2,
 	.mw-body .tocnumber, .mw-body h1, .mw-body h3, .mw-body h4, .portlet h3 {
