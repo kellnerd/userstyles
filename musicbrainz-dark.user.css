@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2021.11.12.2
+@version      2021.11.13
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -181,7 +181,7 @@
 	span.autocomplete img.search {
 		filter: invert(0.5); /* visible when empty and after lookup was performed */
 	}
-	#external-links-editor span.favicon {
+	.discogs-favicon, .home-favicon {
 		filter: drop-shadow(0 0 2px #999); /* black icons become invisible otherwise */
 	}
 	/* popup dialog widget (autocomplete, cover art gallery) */
