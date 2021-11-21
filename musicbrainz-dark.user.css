@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2021.11.21
+@version      2021.11.21.2
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -49,27 +49,18 @@
 	}
 
 	/* table headers and stripes */
-	table.tbl {
+	table.tbl, table.tbl th, table.tbl tr.subh td, table.tbl tr.subh th {
 		border-color: #777;
-		border-top-width: 2px; /* inversion of thead hides 1px border!? */
+		border-left-color: #444;
 	}
-	table.tbl thead, table.tbl .subh {
-		filter: invert(0.9);
+	table.tbl thead {
+		background-image: url('data:image/gif;base64,R0lGODdhAQAyAMIHACAgICEhIS0tLS4uLi8vLzAwMDExMcMmFSwAAAAAAQAyAAADDmi63FUkjimCvRfozbtOADs=');
 	}
-	table.tbl th {
-		color: #111; /* invert(#DDD) = #222 */
-		border-left: 1px solid; /* TODO: no effect, left border not visible */
-		border-bottom-width: 2px; /* inversion of thead hides 1px border!? */
+	table.tbl tr.subh td, table.tbl tr.subh th {
+		background-image: url('data:image/gif;base64,R0lGODdhAQAyAMIHABMTExQUFCEhISIiIiMjIyQkJCUlJcMmFSwAAAAAAQAyAAADDmi63FUkjimCvRfozbtOADs=');
 	}
-	table.tbl .subh input, /* merge release tracklist tables */
-	table.tbl .subh a { /* medium sections in disc id table */
-		filter: invert(1); /* "undo" inversion */
-	}
-	table.tbl th a > bdi { /* attach CD TOC RG link, but not medium titles */
+	table.tbl th a { /* attach CD TOC RG links & medium titles */
 		color: #DDD;
-	}
-	table.tbl .subh td {
-		color: #111; /* invert(#DDD) = #222 */
 	}
 	table.tbl tr.even td, table.tbl tr.even th {
 		background: #444;
@@ -91,14 +82,8 @@
 	}
 
 	/* release page */
-	table.tbl.medium tr:not(.mp) .expand-triangle {
-		filter: invert(1);
-	}
 	dl.ars dt {
 		color: #BBB;
-	}
-	thead tr.mp {
-		filter: invert(1);
 	}
 
 	/* release editor & other entity edit pages */
@@ -163,9 +148,6 @@
 	}
 	#release-editor #recordings fieldset table tr.even td {
 		background: #444;
-	}
-	table.tbl .data-track.icon {
-		filter: invert(1);
 	}
 	/* icons */
 	button.icon.guesscase-title, button.icon.guesscase-sortname, button.icon.guessfeat, img[src*=guesscase],
@@ -241,9 +223,6 @@
 	}
 	button.icon, button.tag-vote, .btn-link { /* exceptions */
 		filter: none;
-	}
-	thead input[type=checkbox], tr.subh input[type=checkbox] {
-		filter: hue-rotate(180deg); /* already inverted through thead / tr.subh */
 	}
 	/* do net let visited buttons look different */
 	.buttons a:visited {
