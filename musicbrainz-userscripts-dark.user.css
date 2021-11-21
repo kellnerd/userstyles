@@ -20,11 +20,6 @@
 		background: #444 !important;
 	}
 
-	/* jesus2099 ELEPHANT EDITOR */
-	label[title^="saves edit note"] {
-		color: initial;
-	}
-
 	/* jesus2099 FUNKEY ILLUSTRATED RECORDS: do not invert real covers */
 	span.caa-icon[style] {
 		filter: none;
@@ -51,24 +46,16 @@
 	/* jesus2099 SUPER MIND CONTROL */
 	#jesus2099userjs85790j2sets, #jesus2099userjs85790j2sets th {
 		background: #444 !important; /* settings */
-	}
-	input[placeholder="YYY+"] { /* EASY_DATE */
-		color: initial;
+		color: inherit;
 	}
 	.header { /* jesus2099 STATIC_MENU */
 		background: #333 !important;
 		box-shadow: #333 0px 10px 5px 8px !important;
 		border-bottom-color: #333 !important;
 	}
-	table.statistics th {
-		color: #EB743B; /* USER_STATS: do not interfere with highlight colors */
-	}
 	/* TAG_TOOLS: make "↙mine and others’" readable */
 	#sidebar > div[style="position: relative; bottom: -1rem; color: black; font-weight: normal; float: right;"] {
 		color: #DDD !important;
-	}
-	#sidebar > div > span[style="background-color: rgb(177, 235, 176);"] {
-		color: initial;
 	}
 
 	/* kellnerd guess punctuation */

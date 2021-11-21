@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2021.11.13
+@version      2021.11.21
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -228,8 +228,10 @@
 		color: #999;
 		border-color: #555;
 	}
-	input[type=text]:not(.lookup-performed):not(.success):not(.error), input:not([type]),
-	input[type=url], input[type=search], input[type=password], input[type=email], textarea {
+	/* invert normal inputs, but keep original text color for those with a specific background color */
+	input[type=text]:not(.lookup-performed):not(.success):not(.error):not([style*=background]),
+	input:not([type]):not([style*=background]), textarea:not([style*=background]),
+	input[type=url], input[type=search], input[type=password], input[type=email] {
 		background: #222;
 		color: #DDD;
 	}
@@ -475,7 +477,8 @@
 	}
 
 	/* keep original text color for elements with inline CSS which affects the background */
-	table[style*=background], td[style*=background] {
+	table[style*=background], td[style*=background], th[style*=background],
+	span[style*=background], label[style*=background] {
 		color: initial;
 	}
 
