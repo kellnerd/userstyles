@@ -29,8 +29,8 @@
 	a[jesus2099userjs81127recname] {
 		color: red;
 	}
-	a[href^="/isrc/"][style] {
-		background-color: #707 !important; /* duplicate ISRC highlight */
+	a[href^="/isrc/"][style*=background], a[href^="//acoustid.org/"][style*=background], #jesus2099userjs81127idcountzone > dt[title] {
+		background-color: #707 !important; /* duplicate ISRC/AcoustID highlight */
 	}
 
 	/* jesus2099 MASS MERGE RECORDINGS */
