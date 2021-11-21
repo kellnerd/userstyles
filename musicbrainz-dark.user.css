@@ -395,6 +395,12 @@
 		color: initial;
 	}
 
+	/* keep original text color for elements with inline CSS which affects the background */
+	table[style*=background], td[style*=background], th[style*=background],
+	span[style*=background], label[style*=background] {
+		color: initial;
+	}
+
 	/* database statistics timeline */
 	.flot-text {
 		color: #BBB !important;
@@ -474,12 +480,6 @@
 	}
 	#mw-indicator-mw-helplink a {
 		filter: invert(0.9) hue-rotate(180deg); /* invert icon */
-	}
-
-	/* keep original text color for elements with inline CSS which affects the background */
-	table[style*=background], td[style*=background], th[style*=background],
-	span[style*=background], label[style*=background] {
-		color: initial;
 	}
 
 	/* wiki tabs */
