@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2021.11.21.2
+@version      2021.11.24
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -19,7 +19,7 @@
 	div.artwork-cont, /* cover art container */
 	div.thumb-position, /* reorder cover art */
 	.search-help, /* editing history help box */
-	div.ar-descr, .form-help, /* help boxes for relationship & attribute types */
+	div.ar-descr, div.form-help, /* help boxes for relationship & attribute types */
 	.add-edit-note .edit-note-help, /* edit notes help box */
 	#drop-zone, /* add cover art */
 	#filter /* artist discography filter */	{
