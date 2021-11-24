@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2021.11.24
+@version      2021.11.24.2
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -49,14 +49,16 @@
 	}
 
 	/* table headers and stripes */
-	table.tbl, table.tbl th, table.tbl tr.subh td, table.tbl tr.subh th {
+	table.tbl, table.tbl th, table.tbl tr.subh td, table.tbl tr.subh th,
+	#release-editor .medium.tbl th {
 		border-color: #777;
 		border-left-color: #444;
 	}
 	table.tbl thead {
 		background-image: url('data:image/gif;base64,R0lGODdhAQAyAMIHACAgICEhIS0tLS4uLi8vLzAwMDExMcMmFSwAAAAAAQAyAAADDmi63FUkjimCvRfozbtOADs=');
 	}
-	table.tbl tr.subh td, table.tbl tr.subh th {
+	table.tbl tr.subh td, table.tbl tr.subh th,
+	#release-editor .medium.tbl th {
 		background-image: url('data:image/gif;base64,R0lGODdhAQAyAMIHABMTExQUFCEhISIiIiMjIyQkJCUlJcMmFSwAAAAAAQAyAAADDmi63FUkjimCvRfozbtOADs=');
 	}
 	table.tbl th a { /* attach CD TOC RG links & medium titles */
