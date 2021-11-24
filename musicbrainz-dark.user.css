@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2021.11.24.2
+@version      2021.11.25
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -9,9 +9,58 @@
 ==/UserStyle== */
 
 @-moz-document regexp("https?://((beta|test|wiki)\\.)?musicbrainz\\.org(.*)") {
+	/* color definitions */
+	/*
+	 * WIP: Some rules still use hard-coded colors, for mainly two reasons:
+	 * 1. The color is not used anywhere else.
+	 * 2. The rule is affected by a filter and has to specify adapted colors.
+	*/
+	:root {
+		--background: #333;
+		--background-accent: #444;
+		--background-emphasis: #555;
+		--background-dimmed: #222;
+		--text: #DDD;
+		--text-dimmed: #BBB;
+		--text-weak: #999;
+		--border: #666;
+		--border-accent: #777;
+		--border-emphasis: #888;
+		--border-dimmed: #555;
+		--border-weak: #444;
+		--shadow: #999;
+		/* MB brand colors */
+		--mb-orange: #EB743B;
+		--mb-purple: #BA478F;
+		/* highlight colors */
+		--negative: #522;
+		--negative-emphasis: #855;
+		--positive: #252;
+		--positive-emphasis: #585;
+		--attention: #884;
+		--error: #633;
+		--pending-edits: #04C; /* not really satisfying but necessary? (see next comment) */
+		/* hyperlinks, have to be visible on dark background and on all highlight colors */
+		--link: #3BF;
+		--link-visited: #F3F;
+		--link-hover: var(--mb-orange);
+		--link-new: #D00;
+
+		/* specific elements (TODO: move to a more specific parent selector?) */
+		--release-tabs-background: var(--background-emphasis);
+		--bubble-background: var(--background-emphasis);
+		--tag-count-background: #666;
+		--edit-actions-background: #777;
+		--wiki-tab: #99C;
+
+		/* filter definitions */
+		--invert: invert(0.9); /* use only for grayscale */
+		--invert-value: invert(0.9) hue-rotate(180deg); /* invert color value but keep the color tone */
+	}
+
 	body {
-		background: #333;
-		color: #DDD;
+		background: var(--background);
+		color: var(--text);
 	}
 
 	/* various emphasized boxes */
@@ -23,12 +72,12 @@
 	.add-edit-note .edit-note-help, /* edit notes help box */
 	#drop-zone, /* add cover art */
 	#filter /* artist discography filter */	{
-		background: #444;
-		border-color: #666;
+		background: var(--background-accent);
+		border-color: var(--border);
 	}
 	div.caa-warning, div.warning {
-		background: #884;
-		border-color: #666;
+		background: var(--attention);
+		border-color: var(--border);
 	}
 
 	/* header menu & tabs */
@@ -36,23 +85,23 @@
 		filter: contrast(1.5);
 	}
 	.header .right ul.menu li ul li {
-		background-color: #444;
+		background-color: var(--background-accent);
 	}
 	.header .right ul.menu li ul li a, div.tabs, div.tabs ul li a {
 		color: inherit;
-		border-color: #666;
+		border-color: var(--border);
 	}
 	div.tabs ul li.disabled a {
-		color: #DDD;
-		background-color: #666;
-		border-color: #666;
+		color: var(--text);
+		background-color: var(--border);
+		border-color: var(--border);
 	}
 
 	/* table headers and stripes */
 	table.tbl, table.tbl th, table.tbl tr.subh td, table.tbl tr.subh th,
 	#release-editor .medium.tbl th {
-		border-color: #777;
-		border-left-color: #444;
+		border-color: var(--border-accent);
+		border-left-color: var(--border-weak);
 	}
 	table.tbl thead {
 		background-image: url('data:image/gif;base64,R0lGODdhAQAyAMIHACAgICEhIS0tLS4uLi8vLzAwMDExMcMmFSwAAAAAAQAyAAADDmi63FUkjimCvRfozbtOADs=');
@@ -62,94 +111,94 @@
 		background-image: url('data:image/gif;base64,R0lGODdhAQAyAMIHABMTExQUFCEhISIiIiMjIyQkJCUlJcMmFSwAAAAAAQAyAAADDmi63FUkjimCvRfozbtOADs=');
 	}
 	table.tbl th a { /* attach CD TOC RG links & medium titles */
-		color: #DDD;
+		color: var(--text);
 	}
 	table.tbl tr.even td, table.tbl tr.even th {
-		background: #444;
+		background: var(--background-accent);
 	}
 
 	/* entity pages */
 	#sidebar, li.separator, .set-cover-art div.editimage {
-		border-color: #666;
+		border-color: var(--border);
 	}
 	.annotation-collapsed::after, .collapsed::after, .review-collapsed::after, .wikipedia-extract-collapsed::after {
-		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, #333 100%) !important;
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, var(--background) 100%) !important;
 	}
 	span.caa-icon {
-		filter: invert(0.9);
+		filter: var(--invert);
 	}
 	.set-cover-art div.editimage.selected {
-		background: #252;
-		border-color: #777;
+		background: var(--positive);
+		border-color: var(--border-accent);;
 	}
 
 	/* release page */
 	dl.ars dt {
-		color: #BBB;
+		color: var(--text-dimmed);
 	}
 
 	/* release editor & other entity edit pages */
 	/* tabs */
 	.ui-tabs .ui-tabs-nav {
-		background: #555;
+		background: var(--release-tabs-background);
 	}
 	.ui-tabs .ui-tabs-nav li {
-		background: #333;
+		background: var(--background);
 	}
 	.ui-tabs-nav .ui-state-default {
-		border-bottom-color: #555 !important; /* = .ui-tabs-nav background color */
+		border-bottom-color: var(--release-tabs-background) !important;
 	}
 	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-		border-color: #666;
+		border-color: var(--border);
 	}
 	.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
-		border-color: #888;
+		border-color: var(--border-emphasis);
 	}
 	.ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited {
-		color:#DDD;
+		color: var(--text);
 	}
 	#release-editor .error-tab {
-		background-color: #633;
+		background-color: var(--error);
 	}
 	/* bubbles, tooltips & dialogs */
 	.bubble {
-		background: #555;
+		background: var(--bubble-background);
 	}
 	.bubble.left-tail::before, .bubble.right-tail::after {
-		border-right-color: #555;
-		border-left-color: #555;
+		border-right-color: var(--bubble-background);
+		border-left-color: var(--bubble-background);
 	}
 	.tooltip-container .tooltip-content {
-		background: #333;
-		border-color: #555;
-		box-shadow: 0 2px 5px #555;
+		background: var(--background);
+		border-color: var(--border-dimmed);
+		box-shadow: 0 2px 5px var(--border-dimmed);
 	}
 	.tooltip-container .tooltip-triangle:before {
-		border-right-color: #555;
+		border-right-color: var(--border-dimmed);
 	}
 	.tooltip-container .tooltip-triangle:after {
-		border-right-color: #333;
+		border-right-color: var(--background);
 	}
 	.dialog {
-		background: #333;
-		border-color: #666;
+		background: var(--background);
+		border-color: var(--border);
 	}
 	.dialog.popover div[data-popper-arrow]::before {
-		background: #333;
+		background: var(--background);
 	}
 	.dialog.popover[data-popper-placement^="right"] > div[data-popper-arrow]::before {
-		border-color: #666;
+		border-color: var(--border);
 	}
 	/* tracklist tab */
 	#release-editor .medium.tbl tr.track td {
 		background: inherit;
-		border-color: #555;
+		border-color: var(--border-dimmed);
 	}
 	#release-editor #recordings fieldset, div.half-width fieldset {
-		border-color: #666;
+		border-color: var(--border);
 	}
 	#release-editor #recordings fieldset table tr.even td {
-		background: #444;
+		background: var(--background-accent);
 	}
 	/* icons */
 	button.icon.guesscase-title, button.icon.guesscase-sortname, button.icon.guessfeat, img[src*=guesscase],
@@ -157,7 +206,7 @@
 	button.icon.copy-date, button.icon.sortname-copy, button.icon.add-item,
 	button.icon.collapse-medium, button.icon.expand-medium,
 	.help, .loading-message {
-		filter: invert(0.9) hue-rotate(180deg);
+		filter: var(--invert-value);
 	}
 	.loading-message {
 		color: initial; /* make message visible again */
@@ -166,7 +215,7 @@
 		filter: invert(0.5); /* visible when empty and after lookup was performed */
 	}
 	.discogs-favicon, .home-favicon {
-		filter: drop-shadow(0 0 2px #999); /* black icons become invisible otherwise */
+		filter: drop-shadow(0 0 2px var(--shadow)); /* black icons become invisible otherwise */
 	}
 	/* popup dialog widget (autocomplete, cover art gallery) */
 	.ui-menu .ui-menu-item a {
@@ -174,31 +223,31 @@
 	}
 	.ui-menu .ui-menu-item a:hover,
 	.ui-widget-content.ui-autocomplete .ui-state-focus {
-		color: #111; /* invert(#222) = #DDD */
-		filter: invert(0.9);
+		color: #111; /* inverted --text */
+		filter: var(--invert);
 	}
 	.ui-widget-content {
 		background: inherit;
-		border-color: #666;
+		border-color: var(--border);
 	}
 	.content-loading {
-		filter: invert(1); /* no white placeholders for images, also inverts animation */
+		filter: var(--invert); /* no white placeholders for images, also inverts spinner animation */
 	}
 
 	/* editor & database statistics */
 	table.statistics th, table.statistics td {
-		border-color: #888;
+		border-color: var(--border-emphasis);
 	}
 	table.statistics th, table.database-statistics tr.thead th {
-		background: #555;
+		background: var(--background-emphasis);
 	}
 
 	/* tags and genres */
 	#all-tags .genre-list li.even, #all-tags .tag-list li.even, .all-tags .genre-list li.even, .all-tags .tag-list li.even {
-		background: #444;
+		background: var(--background-accent);
 	}
 	.tag-count {
-		background: #666;
+		background: var(--tag-count-background);
 	}
 	.tag-upvoted .tag-count, .tag-downvoted .tag-count {
 		color: initial;
@@ -206,22 +255,22 @@
 
 	/* form elements */
 	input, textarea {
-		border-color: #777;
+		border-color: var(--border-accent);;
 	}
 	input[disabled], textarea[disabled] {
-		color: #999;
-		border-color: #555;
+		color: var(--text-weak);
+		border-color: var(--border-dimmed);
 	}
 	/* invert normal inputs, but keep original text color for those with a specific background color */
 	input[type=text]:not(.lookup-performed):not(.success):not(.error):not([style*=background]),
 	input:not([type]):not([style*=background]), textarea:not([style*=background]),
 	input[type=url], input[type=search], input[type=password], input[type=email] {
-		background: #222;
-		color: #DDD;
+		background: var(--background-dimmed);
+		color: var(--text);
 	}
 	input[type=number], input[type=radio], input[type=checkbox], input[type=button], input[type=submit],
 	select, button, .buttons a {
-		filter: invert(0.9) hue-rotate(180deg); /* make it dark but keep the color tone */
+		filter: var(--invert-value);
 	}
 	button.icon, button.tag-vote, .btn-link { /* exceptions */
 		filter: none;
@@ -262,55 +311,55 @@
 	}
 	/* relationship attribute multi-select (vocal type) */
 	div.multiselect > div.menu, div.multiselect > div.items a {
-		background: #555;
-		border-color: #777;
+		background: var(--background-emphasis);
+		border-color: var(--border-accent);
 	}
 	div.multiselect > div.menu > a {
 		color: inherit;
 	}
 	/* external links editor tooltips */
 	.rel-edit .tooltip-content, .rel-add .tooltip-content, .rel-remove .tooltip-content {
-		color: #DDD;
+		color: var(--text);
 	}
 	.tooltip-container .tooltip-content a {
-		color: #3BF !important;
+		color: var(--link) !important;
 	}
 
 	/* pagination */
 	nav .pagination a {
 		background: inherit;
 		color: inherit;
-		border-color: #888;
+		border-color: var(--border-emphasis);
 	}
 	nav .pagination span { /* disabled previous/next button */
-		background: #666;
-		color: #999;
-		border-color: #777;
+		background: var(--border);
+		color: var(--text-weak);
+		border-color: var(--border-accent);
 	}
 
 	/* voting interface */
 	.edit-list {
-		background: #444;
+		background: var(--background-accent);
 	}
 	.edit-notes .edit-note h3 {
-		background: #555;
-		color: #DDD;
+		background: var(--background-emphasis);
+		color: var(--text);
 	}
 	.edit-note:target {
-		background: #884;
+		background: var(--attention);
 	}
 	.edit-notes .edit-note .date {
-		color: #BBB;
+		color: var(--text-dimmed);
 	}
 	.edit-notes .modbot {
-		color: #AAA;
+		color: var(--text-dimmed);
 	}
 	.edit-notes .modbot a {
-		color: #888;
+		color: var(--text-weak);
 	}
 	.edit-list .edit-actions {
 		color: initial;
-		background-color: #777;
+		background-color: var(--edit-actions-background);
 	}
 	/* TODO: convert individual colors of the edit headers to be compatible with custom link colors */
 	.edit-header {
@@ -323,53 +372,53 @@
 	/* user avatars */
 	img.gravatar {
 		background: inherit;
-		border-color: #888;
+		border-color: var(--border-emphasis);
 	}
 	img.gravatar[src*=placeholder] {
 		border-color: #BBB;
 		filter: brightness(0.8);
 	}
 
-	/* hyperlinks, have to be visible on dark background and on all highlight colors */
+	/* hyperlinks */
 	a, #footer a, .btn-link, #content.rel-editor .btn {
-		color: #3BF;
+		color: var(--link);
 	}
 	a:visited {
-		color: #F3F;
+		color: var(--link-visited);
 	}
 	a:focus, a:hover { /* declare this again because it is overwritten by the above rules */
-		color: #EB743B; /* MB brand color */
+		color: var(--link-hover);
 	}
 	h1 a {
-		color: #DDD !important;
+		color: var(--text) !important;
 	}
 
 	/* highlights */
 	.annotation-details, .lastupdate, .small, #footer {
-		color: #BBB;
+		color: var(--text-dimmed);
 	}
 	table.details td span.new, table.details td span.old, table.details td.new, table.details td.old {
-		border-color: #666;
+		border-color: var(--border);
 	}
 	.negative, tr.diff-removal, table.details td span.old, table.details td.old {
-		background: #522;
+		background: var(--negative);
 	}
 	div.diff .diff-only-a, span.diff-only-a {
-		background: #855;
+		background: var(--negative-emphasis);
 	}
 	.positive, tr.diff-addition, table.details td span.new, table.details td.new {
-		background: #252;
+		background: var(--positive);
 	}
 	div.diff .diff-only-b, span.diff-only-b {
-		background: #585;
+		background: var(--positive-emphasis);
 	}
 	::selection {
-		color: #DDD;
-		background: #BA478F; /* MB branding color */
+		color: var(--text);
+		background: var(--mb-purple);
 	}
 	/* pending edits highlight */
 	div.mp,	span.mp, table.tbl tr.mp td, table.tbl tr.mp th, tr.diff-changes {
-		background: #04C !important;
+		background: var(--pending-edits) !important;
 	}
 	/* automatic removal warning for unused entities */
 	p.cleanup {
@@ -384,7 +433,7 @@
 
 	/* database statistics timeline */
 	.flot-text {
-		color: #BBB !important;
+		color: var(--text-dimmed) !important;
 	}
 	#tooltip {
 		color: initial;
@@ -398,19 +447,19 @@
 		background-image: none;
 	}
 	.mw-body, .portlet, .portlet .pBody {
-		background: #333;
+		background: var(--background);
 		color: inherit;
 	}
 	.wikicontent #toc, .wikicontent .toc,
 	.mw-body #toc, .mw-body .toc,
 	.mw-body #filetoc, /* TOC on "File:" pages */
 	.mw-body .catlinks, .mw-changeslist-legend {
-		background: #444;
-		border-color: #666;
+		background: var(--background-accent);
+		border-color: var(--border);
 	}
 	.wikicontent code, .wikicontent pre,
 	.mw-body code, .mw-body pre, .mw-code {
-		background: #555;
+		background: var(--background-emphasis);
 		color: inherit;
 	}
 	.wikicontent #toc h2, .mw-body #toc h2,
@@ -419,10 +468,10 @@
 		color: inherit;
 	}
 	.mw-body .tocnumber, #p-personal li a {
-		color: #DDD;
+		color: var(--text);
 	}
 	#contentSub { /* subtitles like "redirected from" */
-		color: #999;
+		color: var(--text-weak);
 	}
 	table.wikitable {
 		color: inherit;
@@ -430,7 +479,7 @@
 	}
 	.wikicontent table.wikitable th, .wikicontent table[border^="1"] th,
 	.mw-body table.wikitable th, .mw-body table[border^="1"] th {
-		background-color: #444;
+		background-color: var(--background-accent);
 	}
 	table.jquery-tablesorter th {
 		background-color: #BBB !important;
@@ -439,62 +488,62 @@
 	}
 	.wikicontent table.wikitable tr:nth-child(2n) td, .wikicontent table[border^="1"] tr:nth-child(2n) td,
 	.mw-body table.wikitable tr:nth-child(2n+1) td, .mw-body table[border^="1"] tr:nth-child(2n+1) td {
-		background: #444;
+		background: var(--background-accent);
 	}
 	.mbwiki-navbox-rowtitle {
-		background-color: #333;
+		background-color: var(--background);
 	}
 	.wikicontent table.wikitable th, .wikicontent table[border^="1"] th,
 	.wikicontent table.wikitable td, .wikicontent table[border^="1"] td,
 	.mw-body table.wikitable th, .mw-body table[border^="1"] th,
 	.mw-body table.wikitable td, .mw-body table[border^="1"] td {
-		border-color: #777;
+		border-color: var(--border-accent);;
 	}
 	.mw-body fieldset {
 		border-color: #BBB;
 	}
 	a.external, a.external:active, a.external:focus, a.extiw, a.extiw:active, a.extiw:focus, a:active, a:focus {
-		color: #3BF !important;
+		color: var(--link) !important;
 	}
 	a.new {
-		color: #D00 !important;
+		color: var(--link-new) !important;
 	}
 	#mw-indicator-mw-helplink a {
-		filter: invert(0.9) hue-rotate(180deg); /* invert icon */
+		filter: var(--invert-value); /* invert icon */
 	}
 
 	/* wiki tabs */
 	#p-cactions li {
-		border-color: #777;
+		border-color: var(--border-accent);
 	}
 	#p-cactions li a {
-		background: #99C;
-		color: #333;
+		background: var(--wiki-tab);
+		color: var(--background);
 	}
 	#p-cactions li a:hover {
-		background: #333;
-		color: #99C;
+		background: var(--background);
+		color: var(--wiki-tab);
 	}
 	#p-cactions li.selected {
-		border-color: #777 !important;
+		border-color: var(--border-accent) !important;
 	}
 	#p-cactions li.selected a {
-		background: #333;
-		color: #99C;
+		background: var(--background);
+		color: var(--wiki-tab);
 	}
 	#p-cactions .new a {
-		background: #222;
-		color: #D00;
+		background: var(--background-dimmed);
+		color: var(--link-new);
 	}
 
 	/* wiki revision history */
 	#pagehistory li {
-		border-color: #333; /* same as background */
+		border-color: var(--background); /* invisible */
 	}
 	#pagehistory li.selected {
-		background: #444;
-		color: #CCC;
-		border-color: #777;
+		background: var(--background-accent);
+		color: var(--text-dimmed);
+		border-color: var(--border-accent);
 	}
 	.mw-plusminus-neg {
 		color: #DB0000;
@@ -503,9 +552,9 @@
 		color: #00A400;
 	}
 	.diff-context {
-		background: #444;
-		border-color: #556;
-		color: #CCC;
+		background: var(--background-accent);
+		border-color: var(--border-dimmed);
+		color: var(--text-dimmed);
 	}
 
 	/* wiki revision differences */
@@ -524,24 +573,25 @@
 
 	/* wiki date selector */
 	.mw-widget-dateInputWidget-handle {
+		background: var(--background);
 		color: inherit;
 	}
 	.mw-widget-dateInputWidget-empty .mw-widget-dateInputWidget-handle {
-		color: #999;
+		color: var(--text-weak);
 	}
 	.mw-widget-dateInputWidget-calendar {
-		background: #333;
+		background: var(--background);
 	}
 	.mw-widget-calendarWidget-day-heading {
-		color: #999;
+		color: var(--text-weak);
 	}
 	.mw-widget-calendarWidget-day {
-		color: #CCC;
+		color: var(--text-dimmed);
 	}
 	.mw-widget-calendarWidget-day-additional {
 		color: #666;
 	}
 	.mw-widget-calendarWidget-header {
-		filter: invert(0.9);
+		filter: var(--invert);
 	}
 }
