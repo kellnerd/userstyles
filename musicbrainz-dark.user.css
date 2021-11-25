@@ -261,26 +261,21 @@
 		color: var(--text-weak);
 		border-color: var(--border-dimmed);
 	}
-	/* invert normal inputs, but keep original text color for those with a specific background color */
+	/* darken normal inputs, but keep original colors for those with a specific background color */
 	input[type=text]:not(.lookup-performed):not(.success):not(.error):not([style*=background]),
 	input:not([type]):not([style*=background]), textarea:not([style*=background]),
 	input[type=url], input[type=search], input[type=password], input[type=email] {
 		background: var(--background-dimmed);
 		color: var(--text);
 	}
+	/* invert all non-text inputs and buttons */
 	input[type=number], input[type=radio], input[type=checkbox], input[type=button], input[type=submit],
 	select, button, .buttons a {
 		filter: var(--invert-value);
 	}
-	button.icon, button.tag-vote, .btn-link { /* exceptions */
+	/* exceptions: buttons with icons, colored tag voting buttons, button links */
+	button.icon, button.tag-vote, .btn-link {
 		filter: none;
-	}
-	/* do net let visited buttons look different */
-	.buttons a:visited {
-		color: #666;
-	}
-	.buttons a:focus, .buttons a:hover {
-		color: #369; /* declare this again because it is overwritten by the above rule */
 	}
 	/* increase contrast of buttons: lighten outline/text => use darker inverted colors (subtract #333) */
 	.buttons a, .buttons button, .styled-button {
@@ -293,6 +288,10 @@
 		background-color: #AFC4CF;
 		border-color: #62919F;
 		color: #036;
+	}
+	/* do net let visited buttons look different */
+	.buttons a:visited {
+		color: #333; /* same as color of ".buttons a" */
 	}
 
 	/* relationship editor */
