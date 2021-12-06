@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2021.11.25
+@version      2021.12.6
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -50,6 +50,7 @@
 		--release-tabs-background: var(--background-emphasis);
 		--bubble-background: var(--background-emphasis);
 		--tag-count-background: #666;
+		--edit-list-item-background: #3A3A3A; /* between --background and --background-accent */
 		--edit-actions-background: #777;
 		--wiki-tab: #99C;
 
@@ -338,7 +339,7 @@
 
 	/* voting interface */
 	.edit-list {
-		background: var(--background-accent);
+		background: var(--edit-list-item-background);
 	}
 	.edit-notes .edit-note h3 {
 		background: var(--background-emphasis);
