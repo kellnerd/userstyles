@@ -11,13 +11,13 @@
 @-moz-document regexp("https?://((beta|test)\\.)?musicbrainz\\.org(.*)") {
 	/* bitmap batch-add performance of relationships */
 	table#bpr-container {
-		background: #444 !important;
+		background: var(--background-accent) !important;
 		color: inherit;
 	}
 
 	/* jesus2099 COLLECTION HIGHLIGHTER */
 	#collectionHighlighterModal {
-		background: #444 !important;
+		background: var(--background-accent) !important;
 	}
 
 	/* jesus2099 FUNKEY ILLUSTRATED RECORDS: do not invert real covers */
@@ -50,22 +50,22 @@
 
 	/* jesus2099 SUPER MIND CONTROL */
 	#jesus2099userjs85790j2sets, #jesus2099userjs85790j2sets th {
-		background: #444 !important; /* settings */
+		background: var(--background-accent) !important; /* settings */
 		color: inherit;
 	}
 	.header { /* jesus2099 STATIC_MENU */
-		background: #333 !important;
-		box-shadow: #333 0px 10px 5px 8px !important;
-		border-bottom-color: #333 !important;
+		background: var(--background) !important;
+		box-shadow: var(--background) 0px 10px 5px 8px !important;
+		border-bottom-color: var(--background) !important;
 	}
 	/* TAG_TOOLS: make "↙mine and others’" readable */
 	#sidebar > div[style="position: relative; bottom: -1rem; color: black; font-weight: normal; float: right;"] {
-		color: #DDD !important;
+		color: var(--text) !important;
 	}
 
 	/* kellnerd guess punctuation */
 	button.icon.guess-punctuation {
-		filter: invert(0.9) hue-rotate(180deg);
+		filter: var(--invert-value);
 	}
 	input.content-changed, textarea.content-changed {
 		color: initial !important;
@@ -78,7 +78,7 @@
 
 	/* murdos relationship shortcuts */
 	td.relationships a img {
-		filter: drop-shadow(0 0 2px #999); /* black icons become invisible otherwise */
+		filter: drop-shadow(0 0 2px var(--shadow)); /* black icons become invisible otherwise */
 	}
 
 	/* ROpdebee enhanced cover art uploads */
