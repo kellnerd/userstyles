@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark (Userscripts)
-@version      2021.11.21
+@version      2021.12.10
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Companion for “MusicBrainz Dark” with additional style fixes for some popular userscripts.
@@ -35,6 +35,11 @@
 
 	/* jesus2099 MASS MERGE RECORDINGS */
 	div#MMR2099userjs120382, form.MMR2099userjs120382 {
+		color: initial;
+	}
+
+	/* jesus2099 POWER VOTE */
+	div#jesus2099userjs57765xhrstat {
 		color: initial;
 	}
 
