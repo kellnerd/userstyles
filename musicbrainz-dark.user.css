@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2021.12.6
+@version      2021.12.14
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -473,7 +473,7 @@
 	#contentSub { /* subtitles like "redirected from" */
 		color: var(--text-weak);
 	}
-	table.wikitable {
+	table.wikitable:not([style*=background]) { /* prioritize table[style*=background] */
 		color: inherit;
 		background: inherit;
 	}
