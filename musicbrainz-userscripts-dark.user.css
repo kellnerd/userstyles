@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark (Userscripts)
-@version      2021.12.10
+@version      2021.12.14
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Companion for “MusicBrainz Dark” with additional style fixes for some popular userscripts.
@@ -74,11 +74,6 @@
 	/* loujine */
 	#loujine-sidebar, #loujine-menu {
 		background: inherit !important;
-	}
-
-	/* murdos relationship shortcuts */
-	td.relationships a img {
-		filter: drop-shadow(0 0 2px var(--shadow)); /* black icons become invisible otherwise */
 	}
 
 	/* ROpdebee enhanced cover art uploads */
