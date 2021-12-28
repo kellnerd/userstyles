@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark (Userscripts)
-@version      2021.12.14
+@version      2021.12.28
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Companion for “MusicBrainz Dark” with additional style fixes for some popular userscripts.
@@ -9,7 +9,7 @@
 ==/UserStyle== */
 
 @-moz-document regexp("https?://((beta|test)\\.)?musicbrainz\\.org(.*)") {
-	/* bitmap batch-add performance of relationships */
+	/* bitmap batch-add performance of relationships (TODO: selector relies on uncommitted userscript changes) */
 	table#bpr-container {
 		background: var(--background-accent) !important;
 		color: inherit;
@@ -18,6 +18,12 @@
 	/* jesus2099 COLLECTION HIGHLIGHTER */
 	#collectionHighlighterModal {
 		background: var(--background-accent) !important;
+	}
+	.collectionHighlighterBox, .collectionHighlighterRow {
+		border-color: var(--link-visited);
+	}
+	.collectionHighlighterItem {
+		text-shadow: 0 0 8px #F7F !important; /* lighter variant of --link-visited */
 	}
 
 	/* jesus2099 FUNKEY ILLUSTRATED RECORDS: do not invert real covers */
