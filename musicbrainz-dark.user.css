@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2021.12.14
+@version      2021.12.28
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -131,6 +131,10 @@
 	.set-cover-art div.editimage.selected {
 		background: var(--positive);
 		border-color: var(--border-accent);;
+	}
+	/* ratings */
+	.star-rating, .star-rating .current-rating, .star-rating .current-user-rating, .star-rating a:active, .star-rating a:focus, .star-rating a:hover {
+		background-image: url(data:image/gif;base64,R0lGODlhCgAoAIQXADsAn2REAE9PT15eXqVsALh1AH5+fiS5PpGRkf99ACS8P92IAP6AAOWIAP2DAKyM3uyLAPaKAKmpqdjK7Zn+mJn+msT/xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEKAB8ALAAAAAAKACgAAAWp4Cd+gjCen2GgoySdQ2y4Rhy7OD6QuWuKg9xuNMOtRgjJDXE6ipwjAoElgkCoHwbjVOhCEglIt8sAmxOMwofgODumosJZPVqcF6eIo+uInBoBIgENLAcHWBQUWBYWJwqPFIwUj4+MlpYKHwcVlxWHIgqXmSORloqkFY8VpyKToKwjAABYDw9YExMnsgAPuA+7ALjCwrO8w7+xw7MjvcK2zL+8zyLIH7wiIQA7);
 	}
 
 	/* release page */
