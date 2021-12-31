@@ -11,6 +11,8 @@ You have to install [Stylus](https://add0n.com/stylus.html) or a similar browser
 
 ### MusicBrainz Dark
 
+![Screenshot of the Release Editor](screenshots/musicbrainz-dark/release-editor.png)
+
 Dark theme for MusicBrainz.
 There is also a companion with additional style fixes for some popular userscripts.
 
