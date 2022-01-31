@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark (Userscripts)
-@version      2021.12.28
+@version      2022.1.31
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Companion for “MusicBrainz Dark” with additional style fixes for some popular userscripts.
@@ -83,7 +83,8 @@
 	}
 
 	/* ROpdebee enhanced cover art uploads */
-	.ROpdebee_import_url_buttons button img {
+	.ROpdebee_import_url_buttons button img, /* on /add-cover-art pages */
+	.buttons a img { /* on /cover-art pages */
 		filter: hue-rotate(180deg) invert(1); /* undo button inversion */
 	}
 	#ROpdebee_paste_url_status.info {
