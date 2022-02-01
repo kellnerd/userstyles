@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2021.12.31
+@version      2022.2.1
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -371,16 +371,6 @@
 	}
 	.edit-header a, .edit-header a:visited, .edit-header a:hover {
 		color: revert; /* use default link colors */
-	}
-
-	/* user avatars */
-	img.gravatar {
-		background: inherit;
-		border-color: var(--border-emphasis);
-	}
-	img.gravatar[src*=placeholder] {
-		border-color: #BBB;
-		filter: brightness(0.8);
 	}
 
 	/* hyperlinks */
