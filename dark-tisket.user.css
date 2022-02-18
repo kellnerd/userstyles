@@ -1,0 +1,67 @@
+/* ==UserStyle==
+@name         dark-tisket
+@version      2022.2.18
+@namespace    https://github.com/kellnerd/userstyles
+@author       kellnerd
+@description  Dark theme for a-tisket.
+@homepageURL  https://github.com/kellnerd/userstyles
+@license      MIT
+==/UserStyle== */
+
+@-moz-document domain("atisket.pulsewidth.org.uk"), url-prefix("https://etc.marlonob.info/atisket") {
+	body {
+		background-color: #222;
+		color: #FF9400;
+	}
+
+	input[type=text], textarea {
+		background-color: #222;
+		color: #DDD;
+	}
+
+	input[type=radio], input[type=checkbox] {
+		filter: invert(0.9);
+	}
+
+	h1, h2, h3, h4 {
+		color: #D3086B;
+	}
+
+	#main-header h1,
+	#main-header + .disclaimer,
+	#mb-album #mba-general-info .prop .prop-value,
+	#mb-album #mba-general-info .prop.vendor-ids .vendor-name {
+		color: #ad721f;
+	}
+
+	#prev-info .already-in-mb,
+	.discrepancy::before, .discrepancy::after {
+		color: #FF2424;
+	}
+
+	#mb-album #mba-tracklist .isrc > span.isrc-country,
+	#mb-album #mba-tracklist .isrc > span.isrc-year {
+		color: #B04EE2;
+	}
+
+	#mb-album #mba-tracklist .isrc > span.isrc-registrant,
+	#mb-album #mba-tracklist .isrc > span.isrc-designation {
+		color: #53C2FB;
+	}
+
+	a {
+		color: #E25399;
+	}
+
+	a.deez, .deez a, .deez.icon::before {
+		color: #0FABCF;
+	}
+
+	a.spf, .spf a, .spf.icon::before {
+		color: #23E668;
+	}
+
+	a.itu, .itu a, .itu.icon::before {
+		color: #D528DB;
+	}
+}
