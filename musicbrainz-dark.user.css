@@ -238,6 +238,25 @@
 	.content-loading {
 		filter: var(--invert); /* no white placeholders for images, also inverts spinner animation */
 	}
+	/* autocomplete v2 (React rel editor on test server) */
+	div.autocomplete2 ul {
+		background: var(--background);
+		border-color: var(--border);
+	}
+	div.autocomplete2 ul li {
+		background: var(--background);
+		border-color: var(--background);
+	}
+	div.autocomplete2 ul li.separator {
+		border-top-color: var(--border-weak);
+	}
+	div.autocomplete2 ul li.disabled {
+		color: var(--text-weak);
+	}
+	div.autocomplete2 ul li.highlighted, div.autocomplete2 ul li:hover:not(.disabled) {
+		background: #543;
+		border-color: #532;
+	}
 
 	/* editor & database statistics */
 	table.statistics th, table.statistics td {
@@ -268,7 +287,7 @@
 	}
 	/* darken normal inputs, but keep original colors for those with a specific background color */
 	input[type=text]:not(.lookup-performed):not(.success):not(.error):not([style*=background]),
-	input:not([type]):not([style*=background]), textarea:not([style*=background]),
+	input:not([type]):not(.lookup-performed):not([style*=background]), textarea:not([style*=background]),
 	input[type=url], input[type=search], input[type=password], input[type=email] {
 		background: var(--background-dimmed);
 		color: var(--text);
