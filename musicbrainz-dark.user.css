@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2022.2.1
+@version      2022.7.6
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -111,7 +111,7 @@
 	#release-editor .medium.tbl th {
 		background-image: url('data:image/gif;base64,R0lGODdhAQAyAMIHABMTExQUFCEhISIiIiMjIyQkJCUlJcMmFSwAAAAAAQAyAAADDmi63FUkjimCvRfozbtOADs=');
 	}
-	table.tbl th a { /* attach CD TOC RG links & medium titles */
+	table.tbl th a, table.tbl > thead th a { /* attach CD TOC RG links & medium titles */
 		color: var(--text);
 	}
 	table.tbl tr.even td, table.tbl tr.even th {
