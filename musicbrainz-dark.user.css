@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2022.7.6
+@version      2022.8.7
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -390,6 +390,10 @@
 	}
 	.edit-header a, .edit-header a:visited, .edit-header a:hover {
 		color: revert; /* use default link colors */
+	}
+	/* reorder cover art edit: a moved image which has no history/thumbnail, only fallback text */
+	div.thumb-position.moved {
+		color: initial;
 	}
 
 	/* hyperlinks */
