@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2022.8.7
+@version      2023.2.15
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -173,15 +173,16 @@
 		border-right-color: var(--bubble-background);
 		border-left-color: var(--bubble-background);
 	}
-	.tooltip-container .tooltip-content {
+	/* .tooltip-wrapper is required for the React relationship editor but unwanted for the release editor */
+	.tooltip-wrapper .tooltip-container .tooltip-content, .tooltip-container .tooltip-content {
 		background: var(--background);
 		border-color: var(--border-dimmed);
 		box-shadow: 0 2px 5px var(--border-dimmed);
 	}
-	.tooltip-container .tooltip-triangle:before {
+	.tooltip-wrapper .tooltip-container .tooltip-triangle:before, .tooltip-container .tooltip-triangle:before {
 		border-right-color: var(--border-dimmed);
 	}
-	.tooltip-container .tooltip-triangle:after {
+	.tooltip-wrapper .tooltip-container .tooltip-triangle:after, .tooltip-container .tooltip-triangle:after {
 		border-right-color: var(--background);
 	}
 	.dialog {
@@ -238,7 +239,13 @@
 	.content-loading {
 		filter: var(--invert); /* no white placeholders for images, also inverts spinner animation */
 	}
-	/* autocomplete v2 (React rel editor on test server) */
+	/* React relationship editor */
+	div.relationship-dialog h2 .heading-text {
+		background-color: var(--background);
+	}
+	div.relationship-dialog h2 .heading-line {
+		border-color: var(--border);
+	}
 	div.autocomplete2 ul {
 		background: var(--background);
 		border-color: var(--border);
@@ -254,8 +261,8 @@
 		color: var(--text-weak);
 	}
 	div.autocomplete2 ul li.highlighted, div.autocomplete2 ul li:hover:not(.disabled) {
-		background: #543;
-		border-color: #532;
+		background: linear-gradient(180deg, var(--background) 0, var(--background-accent) 50%, var(--background));
+		border-color: var(--border);
 	}
 
 	/* editor & database statistics */
@@ -287,7 +294,7 @@
 	}
 	/* darken normal inputs, but keep original colors for those with a specific background color */
 	input[type=text]:not(.lookup-performed):not(.success):not(.error):not([style*=background]),
-	input:not([type]):not(.lookup-performed):not([style*=background]), textarea:not([style*=background]),
+	input:not([type]):not(.lookup-performed):not(.required):not([style*=background]), textarea:not([style*=background]),
 	input[type=url], input[type=search], input[type=password], input[type=email] {
 		background: var(--background-dimmed);
 		color: var(--text);
