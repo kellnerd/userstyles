@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark (Userscripts)
-@version      2022.1.31
+@version      2023.8.5
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Companion for “MusicBrainz Dark” with additional style fixes for some popular userscripts.
@@ -34,6 +34,9 @@
 	/* jesus2099 INLINE STUFF */
 	a[jesus2099userjs81127recname] {
 		color: red;
+	}
+	#jesus2099userjs81127idcountzone {
+		background-color: var(--background-accent) !important;
 	}
 	a[href^="/isrc/"][style*=background], a[href^="//acoustid.org/"][style*=background], #jesus2099userjs81127idcountzone > dt[title] {
 		background-color: #707 !important; /* duplicate ISRC/AcoustID highlight */
