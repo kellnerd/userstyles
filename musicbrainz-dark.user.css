@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2023.2.15
+@version      2023.10.11
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -274,7 +274,9 @@
 	}
 
 	/* tags and genres */
-	#all-tags .genre-list li.even, #all-tags .tag-list li.even, .all-tags .genre-list li.even, .all-tags .tag-list li.even {
+	.genre-list li.even, .tag-list li.even, /* https://musicbrainz.org/tags?show_list=1 */
+	#all-tags .genre-list li.even, #all-tags .tag-list li.even, /* user tags */
+	.all-tags .genre-list li.even, .all-tags .tag-list li.even { /* tags tab of entities */
 		background: var(--background-accent);
 	}
 	.tag-count {
