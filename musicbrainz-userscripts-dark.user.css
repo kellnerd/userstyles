@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark (Userscripts)
-@version      2023.8.5
+@version      2023.11.20
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Companion for “MusicBrainz Dark” with additional style fixes for some popular userscripts.
@@ -13,6 +13,13 @@
 	table#bpr-container {
 		background: var(--background-accent) !important;
 		color: inherit;
+	}
+
+	/* jesus2099 ALL LINKS */
+	div#sidebar [class^="jesus2099_all-links"],
+	div#sidebar [class^="jesus2099_all-links"] + ul,
+	div#sidebar [class*="jesus2099_all-links_wd-"] ul {
+		background-color: var(--background-accent);
 	}
 
 	/* jesus2099 COLLECTION HIGHLIGHTER */
