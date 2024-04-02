@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2023.10.11
+@version      2024.4.2
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -166,8 +166,11 @@
 		background-color: var(--error);
 	}
 	/* bubbles, tooltips & dialogs */
-	.bubble {
+	.bubble, #artist-credit-bubble {
 		background: var(--bubble-background);
+	}
+	.dialog.popover#artist-credit-bubble > svg {
+		color: var(--bubble-background);
 	}
 	.bubble.left-tail::before, .bubble.right-tail::after {
 		border-right-color: var(--bubble-background);
