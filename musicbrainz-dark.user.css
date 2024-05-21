@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MusicBrainz Dark
-@version      2024.4.2
+@version      2024.5.21
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -192,7 +192,10 @@
 		background: var(--background);
 		border-color: var(--border);
 	}
-	.dialog.popover div[data-popper-arrow]::before {
+	.dialog.popover > svg { /* arrows of the new dialogs */
+		color: var(--background);
+	}
+	.dialog.popover div[data-popper-arrow]::before { /* arrows of the old dialogs, unused? */
 		background: var(--background);
 	}
 	.dialog.popover[data-popper-placement^="right"] > div[data-popper-arrow]::before {
