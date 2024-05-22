@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Dark Side of MusicBrainz
-@version      2024.5.22
+@version      2024.5.22.1
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -478,14 +478,15 @@
 	body.mediawiki div#globalWrapper {
 		background-image: none;
 	}
-	.mw-body, .portlet, .portlet .pBody {
+	.mw-body, .portlet, .portlet .pBody, body.skin--responsive .pBody {
 		background: var(--background);
 		color: inherit;
 	}
 	.wikicontent #toc, .wikicontent .toc,
 	.mw-body #toc, .mw-body .toc,
 	.mw-body #filetoc, /* TOC on "File:" pages */
-	.mw-body .catlinks, .mw-changeslist-legend {
+	.mw-body .catlinks,
+	.mw-rcfilters-ui-changesListWrapperWidget .mw-changeslist-legend {
 		background: var(--background-accent);
 		border-color: var(--border);
 	}
@@ -545,27 +546,38 @@
 	}
 
 	/* wiki tabs */
-	#p-cactions li {
+	body.skin--responsive #p-cactions li {
 		border-color: var(--border-accent);
 	}
-	#p-cactions li a {
+	body.skin--responsive #p-cactions li a {
 		background: var(--wiki-tab);
 		color: var(--background);
 	}
-	#p-cactions li a:hover {
+	body.skin--responsive #p-cactions li a:hover {
 		background: var(--background);
 		color: var(--wiki-tab);
 	}
-	#p-cactions li.selected {
+	body.skin--responsive #p-cactions li.selected {
 		border-color: var(--border-accent) !important;
 	}
-	#p-cactions li.selected a {
+	body.skin--responsive #p-cactions li.selected a {
 		background: var(--background);
 		color: var(--wiki-tab);
 	}
 	#p-cactions .new a {
 		background: var(--background-dimmed);
 		color: var(--link-new);
+	}
+
+	/* wiki editing interface */
+	.editOptions {
+		background: inherit;
+		color: inherit;
+		border-color: var(--border);
+	}
+	/* edit icons are black, impossible to make the background dark */
+	.oo-ui-toolbar-bar {
+		color: initial;
 	}
 
 	/* wiki revision history */
