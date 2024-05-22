@@ -9,11 +9,13 @@ You have to install [Stylus](https://add0n.com/stylus.html) or a similar browser
 
 ## [MusicBrainz](https://musicbrainz.org)
 
-### MusicBrainz Dark
+### Dark Side of MusicBrainz
 
 ![Screenshot of the Release Editor](screenshots/musicbrainz-dark/release-editor.png)
 
 Dark theme for the MusicBrainz website and wiki.
+This is how I imagine a native dark mode to look like, basically only reversing the brightness scale and tweaking a few colors for better contrast.
+
 There is also a companion with additional style fixes for some popular userscripts.
 
 [![Install Theme](https://img.shields.io/badge/Install_Theme-238b8b.svg?style=for-the-badge&logo=stylus)](musicbrainz-dark.user.css?raw=1)
