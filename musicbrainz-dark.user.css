@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Dark Side of MusicBrainz
-@version      2024.5.22.1
+@version      2024.5.23
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -412,7 +412,7 @@
 	}
 
 	/* hyperlinks */
-	a, #footer a, .btn-link, #content.rel-editor .btn {
+	a, a.rel-add, a.rel-edit, #footer a, .btn-link, #content.rel-editor .btn {
 		color: var(--link);
 	}
 	a:visited {
