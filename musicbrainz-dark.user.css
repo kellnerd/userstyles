@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Dark Side of MusicBrainz
-@version      2024.5.23
+@version      2024.5.24
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -76,7 +76,7 @@
 		background: var(--background-accent);
 		border-color: var(--border);
 	}
-	div.caa-warning, div.warning {
+	div.caa-warning, div.eaa-warning, div.warning {
 		background: var(--attention);
 		border-color: var(--border);
 	}
@@ -125,7 +125,8 @@
 	.annotation-collapsed::after, .collapsed::after, .review-collapsed::after, .wikipedia-extract-collapsed::after {
 		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, var(--background) 100%) !important;
 	}
-	span.caa-icon {
+	/* TODO: Remove .caa-icon once https://tickets.metabrainz.org/browse/MBS-13600 is in production */
+	span.caa-icon, span.artwork-icon {
 		filter: var(--invert);
 	}
 	.set-cover-art div.editimage.selected {

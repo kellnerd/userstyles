@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Dark Side of MusicBrainz (for Userscripts)
-@version      2024.5.22
+@version      2024.5.24
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Companion for “Dark Side of MusicBrainz” with additional style fixes for some popular userscripts.
@@ -34,7 +34,8 @@
 	}
 
 	/* jesus2099 FUNKEY ILLUSTRATED RECORDS: do not invert real covers */
-	span.caa-icon[style] {
+	/* TODO: Remove .caa-icon once https://tickets.metabrainz.org/browse/MBS-13600 is in production */
+	span.caa-icon[style], span.artwork-icon[style] {
 		filter: none;
 	}
 
