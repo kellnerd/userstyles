@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Dark Side of MusicBrainz
-@version      2024.5.24
+@version      2024.7.16
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -302,10 +302,14 @@
 		border-color: var(--border-dimmed);
 	}
 	/* darken normal inputs, but keep original colors for those with a specific background color */
-	input[type=text]:not(.lookup-performed):not(.success):not(.error):not([style*=background]),
+	input[type=text]:not(.lookup-performed):not(.success):not(.error):not(.preview):not(.modified):not([style*=background]),
 	input:not([type]):not(.lookup-performed):not(.required):not([style*=background]), textarea:not([style*=background]),
 	input[type=url], input[type=search], input[type=password], input[type=email] {
 		background: var(--background-dimmed);
+		color: var(--text);
+	}
+	input[type=text].modified {
+		background: var(--background-accent);
 		color: var(--text);
 	}
 	/* invert all non-text inputs and buttons */
