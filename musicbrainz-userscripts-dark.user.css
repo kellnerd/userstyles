@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Dark Side of MusicBrainz (for Userscripts)
-@version      2024.5.24
+@version      2025.5.30
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Companion for “Dark Side of MusicBrainz” with additional style fixes for some popular userscripts.
@@ -100,6 +100,10 @@
 	}
 	#ROpdebee_paste_url_status.info {
 		color: inherit;
+	}
+	.ROpdebee_ecau_config .ROpdebee_ecau_config_options {
+		background-color: var(--background-emphasis);
+		border-color: var(--border-emphasis);
 	}
 
 	/* ROpdebee bulk copy-paste work codes */
