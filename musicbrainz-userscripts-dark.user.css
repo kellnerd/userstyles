@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Dark Side of MusicBrainz (for Userscripts)
-@version      2025.5.30
+@version      2025.9.28
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Companion for “Dark Side of MusicBrainz” with additional style fixes for some popular userscripts.
@@ -8,7 +8,7 @@
 @license      MIT
 ==/UserStyle== */
 
-@-moz-document regexp("https?://((beta|test)\\.)?musicbrainz\\.org(.*)") {
+@-moz-document url-prefix("https://musicbrainz.org/"), domain("beta.musicbrainz.org"), domain("test.musicbrainz.org"), domain("musicbrainz.eu") {
 	/* bitmap batch-add performance of relationships (TODO: selector relies on uncommitted userscript changes) */
 	table#bpr-container {
 		background: var(--background-accent) !important;

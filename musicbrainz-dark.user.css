@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Dark Side of MusicBrainz
-@version      2024.7.16
+@version      2025.9.28
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -8,7 +8,7 @@
 @license      MIT
 ==/UserStyle== */
 
-@-moz-document regexp("https?://((beta|test|wiki)\\.)?musicbrainz\\.org(.*)") {
+@-moz-document url-prefix("https://musicbrainz.org/"), domain("beta.musicbrainz.org"), domain("test.musicbrainz.org"), domain("wiki.musicbrainz.org"), domain("musicbrainz.eu") {
 	/* color definitions */
 	/*
 	 * WIP: Some rules still use hard-coded colors, for mainly two reasons:
