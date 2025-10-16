@@ -364,7 +364,7 @@
 	.rel-edit .tooltip-content, .rel-add .tooltip-content, .rel-remove .tooltip-content {
 		color: var(--text);
 	}
-	.tooltip-container .tooltip-content a {
+	.tooltip-wrapper .tooltip-container .tooltip-content a {
 		color: var(--link) !important;
 	}
 
