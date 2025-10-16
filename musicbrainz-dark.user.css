@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Dark Side of MusicBrainz
-@version      2025.9.28
+@version      2025.10.16
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -383,9 +383,8 @@
 	.edit-list {
 		background: var(--edit-list-item-background);
 	}
-	.edit-notes .edit-note h3 {
+	.edit-notes .edit-note h3, .entered-from {
 		background: var(--background-emphasis);
-		color: var(--text);
 	}
 	.edit-note:target {
 		background: var(--attention);
