@@ -125,8 +125,7 @@
 	.annotation-collapsed::after, .collapsed::after, .review-collapsed::after, .wikipedia-extract-collapsed::after {
 		background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, var(--background) 100%) !important;
 	}
-	/* TODO: Remove .caa-icon once https://tickets.metabrainz.org/browse/MBS-13600 is in production */
-	span.caa-icon, span.artwork-icon {
+	span.artwork-icon {
 		filter: var(--invert);
 	}
 	.set-cover-art div.editimage.selected {
