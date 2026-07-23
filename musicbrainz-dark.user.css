@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Dark Side of MusicBrainz
-@version      2025.10.16
+@version      2026.7.23
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Dark theme for MusicBrainz.
@@ -462,7 +462,7 @@
 
 	/* keep original text color for elements with inline CSS which affects the background */
 	table[style*=background], td[style*=background], th[style*=background],
-	span[style*=background], label[style*=background] {
+	div[style*=background], span[style*=background], label[style*=background] {
 		color: initial;
 	}
 
