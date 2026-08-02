@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Dark Side of MusicBrainz (for Userscripts)
-@version      2025.10.16
+@version      2026.7.23
 @namespace    https://github.com/kellnerd/userstyles
 @author       kellnerd
 @description  Companion for “Dark Side of MusicBrainz” with additional style fixes for some popular userscripts.
@@ -25,6 +25,7 @@
 	/* jesus2099 COLLECTION HIGHLIGHTER */
 	#collectionHighlighterModal {
 		background: var(--background-accent) !important;
+		color: inherit;
 	}
 	.collectionHighlighterBox, .collectionHighlighterRow {
 		border-color: var(--link-visited);
@@ -44,6 +45,7 @@
 	}
 	#jesus2099userjs81127idcountzone {
 		background-color: var(--background-accent) !important;
+		color: inherit;
 	}
 	a[href^="/isrc/"][style*=background], a[href^="//acoustid.org/"][style*=background], #jesus2099userjs81127idcountzone > dt[title] {
 		background-color: #707 !important; /* duplicate ISRC/AcoustID highlight */
@@ -90,6 +92,7 @@
 	/* loujine */
 	#loujine-sidebar, #loujine-menu {
 		background: inherit !important;
+		color: inherit;
 	}
 
 	/* ROpdebee enhanced cover art uploads */
